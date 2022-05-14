@@ -3,6 +3,7 @@
         just a <a href="https://fatesinger.com" target="_blank">bigfa</a> wordpress theme.
     </div>
 </footer>
-<?php wp_footer();?>
+<?php wp_footer(); ?>
 </body>
+
 </html>
