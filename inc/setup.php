@@ -55,5 +55,3 @@ function coffin_get_theme()
 
     return compact('wp_version', 'theme_name', 'theme_version', 'site_url');
 }
-
-require('tgm-plugin-activation/plugins.php');
