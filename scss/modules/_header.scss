@@ -1,0 +1,39 @@
+.metabar {
+    background-color: var(--coffin-background-white);
+    position: relative;
+    border-bottom: 1px solid var(--coffin-border-color-light);
+    &--inner {
+        height: 72px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.subnav-ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.sub-menu {
+    display: none;
+}
+
+.menu-item {
+    color: var(--coffin-text-gray);
+    font-size: 14px;
+    transition: color 0.5s ease-in-out 0s;
+    margin-left: 20px;
+    &.current-menu-item {
+        color: var(--coffin-hover-color);
+    }
+}
+
+.site-title {
+    line-height: 1;
+}
+
+.logo {
+    position: relative;
+    z-index: 1;
+}

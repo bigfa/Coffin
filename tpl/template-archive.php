@@ -4,10 +4,10 @@ Template Name: 文章归档模版
 */
 ?>
 <?php get_header(); ?>
-<header class="page-archive-header layoutSingleColumn layoutSingleColumn--wide">
-    <h1 class="page-archive-title"><?php the_title(); ?></h1>
-</header>
 <div class="layoutSingleColumn layoutSingleColumn--wide">
+    <header class="page-archive-header">
+        <h1 class="page-archive-title"><?php the_title(); ?></h1>
+    </header>
     <div class="list-archive-wrapper">
         <?php
         $args = array(

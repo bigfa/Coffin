@@ -1,0 +1,78 @@
+.site-footer,
+body.single {
+    background-color: var(--coffin-background-white);
+}
+
+.site-footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: var(--coffin-text-gray-lightest);
+    text-align: center;
+}
+
+.backToTop {
+    position: fixed;
+    right: 60px;
+    bottom: 50px;
+    cursor: pointer;
+    transform: translate3d(200px, 0, 0);
+    transition: 0.5s;
+
+    .icon {
+        fill: var(--coffin-text-gray);
+        width: 18px;
+        height: 18px;
+    }
+
+    &.is-active {
+        transform: translate3d(0, 0, 0);
+    }
+
+    &:hover {
+        .icon {
+            fill: var(--coffin-main-color);
+        }
+    }
+}
+
+.fixed--theme {
+    position: fixed;
+    right: 20px;
+    bottom: 50%;
+    display: flex;
+    height: max-content;
+    background-color: var(--coffin-background-white);
+    border-radius: 0 10px 0 10px;
+    width: max-content;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 0 1px var(--coffin-border-color);
+    border-radius: 999rem;
+
+    span {
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--coffin-text-gray-lightest);
+        margin-bottom: 5px;
+
+        &:hover {
+            color: var(--coffin-text-color);
+        }
+
+        &.is-active {
+            color: var(--coffin-text-color);
+            background-color: var(--coffin-background-gray);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

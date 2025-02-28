@@ -1,0 +1,159 @@
+:root {
+    // --coffin-main-color: #27ae60;
+    --coffin-main-color: #88b04b; //#4370f5;
+    --coffin-hover-color: #43883d; // #3a5f9a;
+    --coffin-text-color: rgba(0, 0, 0, 0.84);
+    --coffin-text-light: rgba(0, 0, 0, 0.68);
+    --coffin-text-gray: rgba(0, 0, 0, 0.6);
+    --coffin-text-gray-lightest: rgba(0, 0, 0, 0.5);
+
+    --coffin-background-white: rgba(255, 255, 255, 1);
+    --coffin-background-gray: #f0f0f0;
+    --coffin-background-gray-light: #f9f9f9;
+    --coffin-background-opacity: 0.9;
+    --coffin-background-white-opacity: rgba(255, 255, 255, var(--coffin-background-opacity));
+
+    --coffin-border-color: rgba(0, 0, 0, 0.1);
+    --coffin-border-color-light: rgba(0, 0, 0, 0.05);
+
+    --coffin-text-size-small: 14px;
+    --coffin-text-size-normal: 16px;
+    --coffin-text-size-smallest: 12px;
+
+    --coffin-content-width: 836px;
+
+    --db-main-color: var(--coffin-main-color);
+    --db-hover-color: var(--coffin-hover-color);
+    --db--text-color: var(--coffin-text-color);
+    --db--text-color-light: var(--coffin-text-light);
+    --db--background-gray: var(--coffin-background-gray);
+    --db-border-color: var(--coffin-border-color);
+
+    .db--genreItem {
+        &:hover {
+            color: var(--coffin-backgroud-white);
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .auto {
+        // --coffin-main-color: rgba(253, 186, 116, 1);
+        // --coffin-hover-color: rgba(255, 237, 213, 1);
+        --coffin-text-color: #a1a1aa;
+        --coffin-text-light: rgba(161, 161, 170, 1);
+        --coffin-text-gray: rgba(113, 113, 122, 1);
+        --coffin-text-gray-lightest: rgba(113, 113, 122, 0.95);
+
+        --coffin-background-white: #1e1e1e;
+        --coffin-background-gray: #000;
+        --coffin-background-gray-light: #121212;
+        --coffin-background-white-opacity: rgba(30, 30, 30, var(--coffin-background-opacity));
+
+        --coffin-border-color: rgba(63, 63, 70, 0.6);
+        --coffin-border-color-light: rgba(63, 63, 70, 0.4);
+
+        --db-main-color: var(--coffin-main-color);
+        --db-hover-color: var(--coffin-hover-color);
+        --db--text-color: var(--coffin-text-color);
+        --db--text-color-light: var(--coffin-text-light);
+        --db--background-gray: var(--coffin-background-gray);
+        --db-border-color: var(--coffin-border-color);
+
+        .db--genreItem {
+            &:hover {
+                color: var(--coffin-backgroud-white);
+            }
+        }
+
+        .doulist-item {
+            border-color: var(--db-border-color);
+        }
+
+        .comment-form {
+            input,
+            textarea {
+                background-color: rgba(63, 63, 70, 0.15);
+                border-color: rgba(63, 63, 70, 1);
+            }
+        }
+    }
+}
+
+.dark {
+    // --coffin-main-color: rgba(253, 186, 116, 1);
+    // --coffin-hover-color: rgba(255, 237, 213, 1);
+    --coffin-text-color: #a1a1aa;
+    --coffin-text-light: rgba(161, 161, 170, 1);
+    --coffin-text-gray: rgba(113, 113, 122, 1);
+    --coffin-text-gray-lightest: rgba(113, 113, 122, 0.95);
+
+    --coffin-background-white: #1e1e1e;
+    --coffin-background-gray: #000;
+    --coffin-background-gray-light: #121212;
+    --coffin-background-white-opacity: rgba(30, 30, 30, var(--coffin-background-opacity));
+
+    --coffin-border-color: rgba(63, 63, 70, 0.6);
+    --coffin-border-color-light: rgba(63, 63, 70, 0.4);
+
+    --db-main-color: var(--coffin-main-color);
+    --db-hover-color: var(--coffin-hover-color);
+    --db--text-color: var(--coffin-text-color);
+    --db--text-color-light: var(--coffin-text-light);
+    --db--background-gray: var(--coffin-background-gray);
+    --db-border-color: var(--coffin-border-color);
+
+    .db--genreItem {
+        &:hover {
+            color: var(--coffin-backgroud-white);
+        }
+    }
+
+    .doulist-item {
+        border-color: var(--db-border-color);
+    }
+
+    .comment-form {
+        input,
+        textarea {
+            background-color: rgba(63, 63, 70, 0.15);
+            border-color: rgba(63, 63, 70, 1);
+        }
+    }
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Light.woff2') format('woff2'),
+        url('../fonts/OpenSans-Light.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Medium.woff2') format('woff2'),
+        url('../fonts/OpenSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

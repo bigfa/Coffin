@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <div class="layoutSingleColumn layoutSingleColumn--page">
-    <div class="u-backgroundColorWhite page-wrapper">
+    <article class="u-backgroundColorWhite page-wrapper" itemscope="itemscope" itemtype="http://schema.org/Article">
         <?php while (have_posts()) : the_post(); ?>
-            <header class="entry-header">
-                <?php the_title('<h2 class="entry-title">', '</h2>'); ?>
+            <header class="entry--header">
+                <?php the_title('<h2 class="entry--title" itemprop="headline">', '</h2>'); ?>
             </header>
-            <div class="grap">
+            <div class="grap entry--content" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
             <?php
@@ -14,6 +14,6 @@
             endif;
             ?>
         <?php endwhile; ?>
-    </div>
+    </article>
 </div>
 <?php get_footer(); ?>

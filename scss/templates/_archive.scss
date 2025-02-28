@@ -1,0 +1,102 @@
+.month-title {
+    font-size: 20px;
+    color: var(--coffin-text-gray);
+}
+
+.page-archive {
+    &-header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &-title {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.list-archive {
+    margin-bottom: 20px;
+    &-wrapper {
+        padding: 50px;
+        background-color: var(--coffin-background-white);
+        margin-bottom: 50px;
+    }
+}
+
+.archive-item {
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &-title {
+        font-size: 16px;
+        &:before {
+            content: '·';
+            color: var(--coffin-main-color);
+            font-size: 40px;
+            line-height: 18px;
+            vertical-align: -8px;
+            margin-right: 8px;
+        }
+        &:hover {
+            color: var(--coffin-main-color);
+        }
+    }
+}
+
+.archive-header {
+    padding-top: 50px;
+
+    .page-title {
+        font-size: 22px;
+        margin-bottom: 5px;
+        line-height: 1.4;
+    }
+
+    .taxonomy-description {
+        color: var(--coffin-text-gray);
+        font-size: 14px;
+    }
+}
+
+.author-header {
+    padding-top: 50px;
+    .avatar {
+        border-radius: 100%;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+        color: var(--coffin-text-gray);
+    }
+}
+
+.tag--card {
+    margin-top: 30px;
+    background-color: var(--coffin-background-white);
+    padding: 20px;
+    // border: 1px solid var(--coffin-border-color-light);
+
+    &--content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--item {
+        border-radius: 999rem;
+        background-color: var(--coffin-background-gray);
+        color: var(--coffin-text-light);
+        padding: 5px 20px;
+        margin-right: 10px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    & + .sandraList {
+        padding-top: 40px;
+    }
+}

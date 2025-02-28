@@ -5,17 +5,16 @@ if (post_password_required())
 <div id="comments" class="comments-area">
     <div class="layoutSingleColumn">
         <?php if (have_comments()) : ?>
-            <h2 class="comments-title">
+            <h3 class="comments-title">
                 <?php echo number_format_i18n(get_comments_number()); ?> 条评论
-            </h2>
+            </h3>
             <ol class="comment-list">
                 <?php
                 wp_list_comments(array(
                     'style'       => 'ol',
                     'short_ping'  => true,
-                    'reply_text'  => 'Respond',
                     'avatar_size' => 42,
-                    'format'            => 'html5'
+                    'format'      => 'html5'
                 ));
                 ?>
             </ol>

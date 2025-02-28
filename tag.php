@@ -7,6 +7,19 @@
         the_archive_description('<div class="taxonomy-description">', '</div>');
         ?>
     </header>
+    <div class="tag--card">
+        <?php
+        // get related tags
+        $tags = get_tags(array('orderby' => 'count', 'order' => 'DESC', 'number' => 10));
+        if ($tags) {
+            echo '<div class="tag--card--content">';
+            foreach ($tags as $tag) {
+                echo '<a href="' . get_tag_link($tag->term_id) . '" class="tag--card--item">' . $tag->name . '</a>';
+            }
+            echo '</div>';
+        }
+        ?>
+    </div>
     <div class="sandraList">
         <?php while (have_posts()) : the_post(); ?>
             <?php get_template_part('template-part/post/content'); ?>

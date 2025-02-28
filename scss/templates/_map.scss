@@ -1,0 +1,129 @@
+.footer--map {
+    height: 550px;
+}
+
+.mapboxgl-ctrl-attrib-inner {
+    display: none;
+}
+
+.mapboxgl-ctrl-bottom-left {
+    display: none;
+}
+
+.map--container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page--header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.markerPro {
+    &--posts {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px;
+        display: grid;
+        // padding-bottom: 30px;
+    }
+
+    &--addon {
+        padding-top: 30px;
+    }
+
+    &--post {
+        box-shadow: none;
+        transition: 1s background-position;
+        background-color: var(--coffin-background-gray-light);
+        color: var(--coffin-text-gray);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        min-width: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-decoration: none !important;
+
+        .markerPro--content {
+            flex: 1 1 auto;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__hera {
+            &::before {
+                display: none;
+            }
+            flex-direction: row;
+            img {
+                width: 110px;
+                height: 110px;
+                object-fit: cover;
+                border-radius: 0 8px 8px 0;
+            }
+        }
+    }
+
+    &--title {
+        position: relative;
+        margin: 3px 0;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.4;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        font-size: 16px;
+        color: var(--coffin-text-color);
+
+        a {
+            text-decoration: none;
+            &:hover {
+                color: var(--coffin-hover-color);
+            }
+        }
+    }
+
+    &--meta {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        // color: rgba(255, 255, 255, 0.9);
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-top: auto;
+
+        .flag {
+            width: 24px;
+            height: 24px;
+            margin-left: auto;
+        }
+    }
+
+    &--addonTitle {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .markerPro--posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sep {
+    &::before {
+        content: '·';
+    }
+    margin: 0 5px;
+}
