@@ -8,13 +8,14 @@ if (post_password_required())
             <h3 class="comments-title">
                 <?php echo number_format_i18n(get_comments_number()); ?> 条评论
             </h3>
-            <ol class="comment-list">
+            <ol class="comment-list commentlist">
                 <?php
                 wp_list_comments(array(
                     'style'       => 'ol',
                     'short_ping'  => true,
                     'avatar_size' => 42,
-                    'format'      => 'html5'
+                    'format'      => 'html5',
+                    'callback'    => 'coffin_comment',
                 ));
                 ?>
             </ol>

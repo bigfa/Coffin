@@ -18,43 +18,6 @@
     font-size: 12px;
 }
 
-.comment-body {
-    padding-bottom: 25px;
-    padding-top: 25px;
-    border-bottom: 1px solid var(--coffin-border-color-light);
-    position: relative;
-}
-.comment {
-    .avatar {
-        border-radius: 100%;
-        float: left;
-        margin-right: 8px;
-    }
-
-    .says {
-        display: none;
-    }
-
-    .fn {
-        line-height: 1.2;
-    }
-
-    .reply {
-        position: absolute;
-        top: 20px;
-        right: 0;
-    }
-}
-.comment-metadata {
-    font-size: 12px;
-    color: var(--coffin-text-gray-lightest);
-}
-
-.comment-content {
-    font-size: 14px;
-    color: var(--coffin-text-gray);
-}
-
 .comment-reply-link {
     display: inline-block;
     background-color: var(--coffin-main-color);
@@ -68,17 +31,8 @@
     }
 }
 
-.comment-meta {
-    overflow: hidden;
-    margin-bottom: 5px;
-}
-
 .children {
     margin-left: 50px;
-}
-
-.comment-author {
-    line-height: 1.4;
 }
 
 .comment-form {
@@ -176,4 +130,72 @@
 .logged-in-as {
     font-size: 12px;
     color: var(--coffin-text-gray);
+}
+
+.comment {
+    &--block {
+        padding: 25px 0;
+        border-bottom: 1px solid var(--coffin-border-color-light);
+    }
+
+    &--info {
+        display: flex;
+        align-items: center;
+    }
+
+    &--meta {
+        flex: 1 1 auto;
+        line-height: 1.6;
+    }
+
+    &--time {
+        font-size: 12px;
+        color: var(--coffin-text-gray-lightest);
+    }
+
+    &--author {
+        font-size: 14px;
+        color: var(--coffin-text-gray);
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-left: 5px;
+        }
+
+        .comment-reply-link {
+            margin-left: auto;
+            cursor: pointer;
+        }
+    }
+
+    &--content {
+        padding: 5px;
+        color: var(--coffin-text-light);
+        font-size: 14px;
+    }
+
+    &--avatar {
+        margin-right: 10px;
+        display: flex;
+    }
+
+    .avatar {
+        border-radius: 100%;
+    }
+
+    .children & {
+        .avatar {
+            width: 36px;
+            height: 36px;
+        }
+
+        &--meta {
+            line-height: 1.4;
+        }
+
+        &--block {
+            padding: 15px 0;
+        }
+    }
 }
