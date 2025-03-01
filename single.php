@@ -34,7 +34,11 @@ global $coffinSetting;
                         <?php the_author_meta('description'); ?>
                     </div>
                 </div>
-
+                <?php if ($coffinSetting->get_setting('footer_sns')) : ?>
+                    <div class="site--footer__sns">
+                        <?php get_template_part('template-part/sns'); ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </article>
     </main>
