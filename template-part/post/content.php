@@ -12,12 +12,6 @@
             <time itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>" class="humane--time">
                 <?php echo get_the_date('m d,Y'); ?></time><span class="middotDivider"></span><?php the_category(',') ?>
         </div>
-        <?php if (get_the_terms(get_the_ID(), 'country')) :
-            $country = get_the_terms(get_the_ID(), 'country');
-            $country = array_shift($country);
-            $slug = $country->slug;
-        ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/flags/<?php echo $slug; ?>.svg" alt="<?php echo $country->name; ?>" class="flag">
-        <?php endif; ?>
+        <?php do_action('marker_pro_flag', get_the_ID()); ?>
     </div>
 </article>
