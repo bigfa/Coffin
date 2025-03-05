@@ -15,8 +15,6 @@ $authorId = get_query_var('author'); ?>
         <?php endwhile; ?>
     </div>
     <?php the_posts_pagination(array(
-        'prev_text' => 'Previous page',
-        'next_text' => 'Next page',
         'prev_next' => false,
         'before_page_number' => '',
     )); ?>

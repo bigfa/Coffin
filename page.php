@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<div class="layoutSingleColumn layoutSingleColumn--page">
-    <article class="u-backgroundColorWhite page-wrapper" itemscope="itemscope" itemtype="http://schema.org/Article">
+<div class="layoutSingleColumn">
+    <article class="entry" itemscope="itemscope" itemtype="http://schema.org/Article">
         <?php while (have_posts()) : the_post(); ?>
             <header class="entry--header">
                 <?php the_title('<h2 class="entry--title" itemprop="headline">', '</h2>'); ?>

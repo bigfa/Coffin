@@ -6,6 +6,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        .flag {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 10px;
+        }
     }
 
     &--title {

@@ -1,5 +1,6 @@
 .site-footer,
-body.single {
+body.single,
+body.page {
     background-color: var(--coffin-background-white);
 }
 
@@ -9,6 +10,12 @@ body.single {
     font-size: 14px;
     color: var(--coffin-text-gray-lightest);
     text-align: center;
+    a {
+        &:hover {
+            text-decoration: underline;
+            color: var(--coffin-text-color);
+        }
+    }
 }
 
 .site--footer {

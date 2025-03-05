@@ -100,3 +100,16 @@
         padding-top: 40px;
     }
 }
+
+.year-nav {
+    display: flex;
+    flex-wrap: wrap;
+    .year-item {
+        border: 1px solid var(--coffin-border-color-light);
+        margin-right: 10px;
+        padding: 5px 25px;
+        color: var(--coffin-text-gray);
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+}

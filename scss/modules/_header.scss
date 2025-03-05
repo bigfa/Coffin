@@ -12,7 +12,7 @@
 .subnav-ul {
     display: flex;
     align-items: center;
-    margin-left: auto;
+    margin-left: 15px;
 }
 
 .sub-menu {
@@ -22,9 +22,9 @@
 .menu-item {
     color: var(--coffin-text-gray);
     font-size: 14px;
-    transition: color 0.5s ease-in-out 0s;
     margin-left: 20px;
-    &.current-menu-item {
+    &.current-menu-item,
+    &:hover {
         color: var(--coffin-hover-color);
     }
 }
@@ -36,4 +36,32 @@
 .logo {
     position: relative;
     z-index: 1;
+    &--rounded {
+        border-radius: 100%;
+    }
+}
+
+.search-form {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    .search-submit {
+        display: none;
+    }
+
+    .search-field {
+        border-radius: 999rem;
+        border: 0;
+        background-color: var(--coffin-background-gray);
+        font-size: 12px;
+        padding: 6px 25px;
+        line-height: 1.8;
+        width: 240px;
+        color: var(--coffin-text-gray);
+
+        &:focus {
+            outline: none;
+            color: var(--coffin-text-color);
+        }
+    }
 }

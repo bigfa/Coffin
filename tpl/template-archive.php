@@ -16,32 +16,50 @@ Template Name: 文章归档模版
             'ignore_sticky_posts' => 1,
         );
         $the_query = new WP_Query($args);
-        $year = 0;
-        $mon = 0;
-        $all = array();
+        $posts = [];
+
+        $all = [];
         $output = '';
-        $i = 0;
         while ($the_query->have_posts()) : $the_query->the_post();
-            $i++;
-            $year_tmp = get_the_time('Y');
-            $mon_tmp = get_the_time('n');
-            $y = $year;
-            $m = $mon;
-            if ($mon != $mon_tmp && $mon > 0) $output .= '</ul></div>';
-            if ($year != $year_tmp) {
-                $year = $year_tmp;
-                $all[$year] = array();
-            }
-            if ($mon != $mon_tmp) {
-                $i = 0;
-                $mon = $mon_tmp;
-                $output .= "<div class='list list--archive'><h3 class='month-title'>" . $year . ' - ' . $mon . '</h3>'  . "<ul class='blockGroup is-ordered'>";
-            }
-            $output .= '<li class="archive-item"><a class="archive-item-title" href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+            $posts[] = [
+                'title' => get_the_title(),
+                'permalink' => get_permalink(),
+                'time' => get_the_time('Y-m-d'),
+                'year' => get_the_time('Y'),
+                'mon' => get_the_time('n'),
+            ];
         endwhile;
         wp_reset_postdata();
-        $output .= '</ul></div>';
-        echo $output;      ?>
+        // group post by year
+        foreach ($posts as $key => $val) {
+            $all[$val['year']][$val['mon']][] = $val;
+        }
+
+        // list years
+
+        $years = array_keys($all);
+        echo '<nav class="year-nav">';
+        foreach ($years as $year) {
+            echo '<span class="year-item">' . $year . '</span>';
+        }
+        echo '</nav>';
+
+        // list posts
+        foreach ($all as $year => $months) {
+            echo '<div class="year-wrapper" id="year-' . $year . '">';
+            echo '<h2 class="year-title">' . $year . '</h2>';
+            foreach ($months as $mon => $posts) {
+                echo '<h3 class="month-title">' . $mon . ' 月</h3>';
+                echo '<ul class="month-posts">';
+                foreach ($posts as $post) {
+                    echo '<li class="month-post"><a href="' . $post['permalink'] . '">' . $post['title'] . '</a><span class="post-time">' . $post['time'] . '</span></li>';
+                }
+                echo '</ul>';
+            }
+            echo '</div>';
+        }
+
+        ?>
     </div>
 </div>
 <?php get_footer(); ?>
