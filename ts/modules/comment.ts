@@ -40,18 +40,19 @@ class coffinComment extends coffinBase {
                             n = document.getElementById('wp-temp-form-div');
                         const comment = data.data;
                         const html = `<li class="comment" id="comment-${comment.comment_ID}">
-                        <article class="comment-body comment-body__fresh">
-                            <footer class="comment-meta">
-                                <div class="comment-author vcard">
+                        <article class="comment--block comment-body__fresh">
+                            <footer class="comment--info">
+                                <div class="comment--avatar">
                                     <img alt="" src="${comment.author_avatar_urls}" class="avatar" height="42" width="42" />
-                                    <b class="fn">${comment.comment_author}</b>
                                 </div>
-                                <div class="comment-metadata">
-                                    <time>刚刚</time>
+                                <div class="comment--meta">
+                                    <div class="comment--author">${comment.comment_author}</div>
+
+                                    <time class="comment--time">刚刚</time>
                                 </div>
                                 </div>
                             </footer>
-                            <div class="comment-content">
+                            <div class="comment-content comment--content">
                                 ${comment.comment_content}
                             </div>
                         </article>

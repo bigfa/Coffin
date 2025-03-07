@@ -1,6 +1,7 @@
 <?php
 if (post_password_required())
     return;
+global $coffinSetting;
 ?>
 <div id="comments" class="comments-area">
     <div class="layoutSingleColumn">
@@ -10,14 +11,23 @@ if (post_password_required())
             </h3>
             <ol class="comment-list commentlist">
                 <?php
-                wp_list_comments(array(
-                    'style'       => 'ol',
-                    'short_ping'  => true,
-                    'avatar_size' => 42,
-                    'format'      => 'html5',
-                    'callback'    => 'coffin_comment',
-                ));
-                ?>
+                if (have_comments()) {
+                    wp_list_comments(array(
+                        'style'       => 'ol',
+                        'short_ping'  => true,
+                        'avatar_size' => 42,
+                        'format'      => 'html5',
+                        'callback'    => 'coffin_comment',
+                    ));
+                } else { ?>
+                    <li class="no--comment">
+                        <?php if ($coffinSetting->get_setting('no_reply_text')) {
+                            echo $coffinSetting->get_setting('no_reply_text');
+                        } else {
+                            _e('This post has no comment yet', 'Coffin');
+                        } ?>
+                    </li>
+                <?php } ?>
             </ol>
             <?php the_comments_pagination(array(
                 'prev_next' => false,
