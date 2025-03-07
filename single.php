@@ -34,6 +34,7 @@ global $coffinSetting;
                     </div>
                 <?php endif; ?>
             </div>
+            <?php get_template_part('template-part/single-related'); ?>
         </article>
     </main>
     <?php
