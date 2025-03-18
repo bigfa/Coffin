@@ -4,8 +4,8 @@
  * The template for displaying sns icons
  *
  * @package Bigfa
- * @subpackage Hera
- * @since Hera 0.0.9
+ * @subpackage Coffin
+ * @since Coffin 2.0.0
  */
 
 global $coffinSetting;
