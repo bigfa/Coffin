@@ -38,11 +38,11 @@ Template Name: 文章归档模版
         // list years
 
         $years = array_keys($all);
-        echo '<nav class="year-nav">';
-        foreach ($years as $year) {
-            echo '<span class="year-item">' . $year . '</span>';
-        }
-        echo '</nav>';
+        // echo '<nav class="year-nav">';
+        // foreach ($years as $year) {
+        //     echo '<span class="year-item">' . $year . '</span>';
+        // }
+        // echo '</nav>';
 
         // list posts
         foreach ($all as $year => $months) {
@@ -52,7 +52,7 @@ Template Name: 文章归档模版
                 echo '<h3 class="month-title">' . $mon . ' 月</h3>';
                 echo '<ul class="month-posts">';
                 foreach ($posts as $post) {
-                    echo '<li class="month-post"><a href="' . $post['permalink'] . '">' . $post['title'] . '</a><span class="post-time">' . $post['time'] . '</span></li>';
+                    echo '<li class="month-post"><a href="' . $post['permalink'] . '" class="post-title">' . $post['title'] . '</a><span class="post-time">' . $post['time'] . '</span></li>';
                 }
                 echo '</ul>';
             }
