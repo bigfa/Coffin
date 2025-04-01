@@ -41,13 +41,14 @@ global $coffinSetting;
             // get_template_part('template-part/single-related');
             ?>
         </article>
-    </main>
+
+        <?php
+        if (comments_open() || get_comments_number()) :
+            comments_template();
+        endif;
+        ?>
     <?php
-    if (comments_open() || get_comments_number()) :
-        comments_template();
-    endif;
-    ?>
-<?php
-// get_template_part('template-part/single-related');
+    get_template_part('template-part/single-related');
 endwhile; ?>
-<?php get_footer(); ?>
+    </main>
+    <?php get_footer(); ?>
