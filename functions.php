@@ -1,9 +1,9 @@
 <?php
 define('COFFIN_VERSION', wp_get_theme()->get('Version'));
-define('COFFIN_SETTING_KEY', 'sierra_setting');
-define('COFFIN_ARCHIVE_VIEW_KEY', 'sierra_post_view');
-define('COFFIN_POST_VIEW_KEY', 'sierra_post_view');
-define('COFFIN_POST_LIKE_KEY', 'sierra_comment_view');
+define('COFFIN_SETTING_KEY', 'coffin_setting');
+define('COFFIN_ARCHIVE_VIEW_KEY', 'coffin_post_view');
+define('COFFIN_POST_VIEW_KEY', 'coffin_post_view');
+define('COFFIN_POST_LIKE_KEY', 'coffin_post_like');
 
 load_theme_textdomain('Coffin', get_template_directory() . '/languages');
 

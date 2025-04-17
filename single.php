@@ -35,10 +35,8 @@ global $coffinSetting;
                 <?php endif; ?>
             </div>
             <?php
-            //if ($coffinSetting->get_setting('post_navigation'))
-            get_template_part('template-part/post', 'navigation');
-
-            // get_template_part('template-part/single-related');
+            if ($coffinSetting->get_setting('post_navigation'))
+                get_template_part('template-part/post', 'navigation');
             ?>
         </article>
 
@@ -47,8 +45,13 @@ global $coffinSetting;
             comments_template();
         endif;
         ?>
-    <?php
-    get_template_part('template-part/single-related');
-endwhile; ?>
+        <?php
+        if ($coffinSetting->get_setting('related_post'))
+            get_template_part('template-part/single-related');
+        ?>
     </main>
-    <?php get_footer(); ?>
+<?php
+endwhile;
+?>
+
+<?php get_footer(); ?>
