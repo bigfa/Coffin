@@ -159,3 +159,31 @@
         color: var(--coffin-text-gray-lightest);
     }
 }
+
+.collectionHeader {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    .archive-header-image {
+        width: 78px;
+        height: 78px;
+        object-fit: cover;
+        flex: 0 0 auto;
+        margin-right: 20px;
+    }
+
+    &-nameAndDescription {
+        flex: 1 1 auto;
+        line-height: 1;
+    }
+
+    &-name {
+        margin-bottom: 15px;
+    }
+
+    &-description {
+        color: var(--coffin-text-gray);
+        font-size: 14px;
+    }
+}

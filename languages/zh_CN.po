@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: Coffin 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Coffin\n"
 "POT-Creation-Date: 2025-02-24T11:58:27+00:00\n"
-"PO-Revision-Date: 2025-02-27 12:17+0800\n"
+"PO-Revision-Date: 2025-04-18 15:42+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 "X-Domain: Coffin\n"
 
 #. Theme Name of the theme
@@ -47,7 +47,7 @@ msgstr ""
 #: inc/comment.php:143 inc/comment.php:162 inc/comment.php:192
 #: inc/comment.php:205 inc/comment.php:231 inc/setting.php:28
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 #: inc/setting.php:47
 msgid "Setting saved success!"
@@ -287,7 +287,7 @@ msgstr ""
 
 #: inc/setting.php:456
 msgid "No reply text"
-msgstr ""
+msgstr "无评论文案"
 
 #: inc/setting.php:457
 msgid "Text display when no comment in current post."
@@ -401,67 +401,63 @@ msgstr ""
 
 #: inc/setting.php:563
 msgid "Copyright"
-msgstr ""
+msgstr "版权信息"
 
 #: inc/setting.php:564
 msgid "Custom footer content"
-msgstr ""
+msgstr "自定义底部版权信息"
 
-#: inc/static.php:28
+#: modules/base.php:191
 msgid "second ago"
-msgstr ""
+msgstr "秒前"
 
-#: inc/static.php:29
+#: modules/base.php:192
 msgid "seconds ago"
-msgstr ""
+msgstr "秒前"
 
-#: inc/static.php:30
+#: modules/base.php:193
 msgid "minute ago"
-msgstr ""
+msgstr "分钟前"
 
-#: inc/static.php:31
+#: modules/base.php:194
 msgid "minutes ago"
-msgstr ""
+msgstr "分钟前"
 
-#: inc/static.php:32
+#: modules/base.php:195
 msgid "hour ago"
-msgstr ""
+msgstr "小时前"
 
-#: inc/static.php:33
+#: modules/base.php:196
 msgid "hours ago"
-msgstr ""
+msgstr "小时前"
 
-#: inc/static.php:34
+#: modules/base.php:197
 msgid "day ago"
-msgstr ""
+msgstr "天前"
 
-#: inc/static.php:35
+#: modules/base.php:198
 msgid "days ago"
-msgstr ""
+msgstr "天前"
 
-#: inc/static.php:36
+#: modules/base.php:199
 msgid "week ago"
-msgstr ""
+msgstr "周前"
 
-#: inc/static.php:37
+#: modules/base.php:200
 msgid "weeks ago"
-msgstr ""
+msgstr "周天"
 
-#: inc/static.php:38
+#: modules/base.php:201
 msgid "month ago"
-msgstr ""
+msgstr "个月前"
 
-#: inc/static.php:39
+#: modules/base.php:202
 msgid "months ago"
-msgstr ""
+msgstr "个月前"
 
-#: inc/static.php:40
+#: modules/base.php:203
 msgid "year ago"
-msgstr ""
-
-#: inc/static.php:41
-msgid "years ago"
-msgstr ""
+msgstr "年前"
 
 #. Template Name of the theme
 msgid "文章归档模版"

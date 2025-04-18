@@ -4,6 +4,10 @@
 
 ## ChangeLog
 
+### 2.0.3
+
+- update translation
+
 ### 2.0.2
 
 - add footer setting

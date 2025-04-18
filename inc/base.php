@@ -108,24 +108,14 @@ class coffinBase
     function add_category_cover_form_item($category)
     {
         $cover  = get_term_meta($category->term_id, '_thumb', true);
-        $card  = get_term_meta($category->term_id, '_card', true); ?>
+        // $card  = get_term_meta($category->term_id, '_card', true); 
+?>
         <table class="form-table">
             <tr class="form-field">
                 <th scope="row" valign="top"><label for="_category_cover"><?php _e('Cover', 'Coffin'); ?></label></th>
                 <td><input name="_category_cover" id="_category_cover" type="text" size="40" aria-required="false" value="<?php echo $cover; ?>" class="regular-text ltr" />
                     <p class="description"><button id="upload-categoryCover" class="button"><?php _e('Upload', 'Coffin'); ?></button></p>
                     <p class="description"><?php _e('Category cover url.', 'Coffin'); ?></p>
-                </td>
-            </tr>
-            <tr class="form-field">
-                <th scope="row"><?php _e('Card Template', 'Coffin'); ?></th>
-                <td>
-                    <fieldset>
-                        <legend class="screen-reader-text"><span>
-                                <?php _e('Card Template', 'Coffin'); ?></span></legend><label for="_category_card">
-                            <input name="_category_card" type="checkbox" id="_category_card" value="1" <?php if ($card) echo 'checked' ?>>
-                            <?php _e('Use Card Template', 'Coffin'); ?></label>
-                    </fieldset>
                 </td>
             </tr>
         </table>
