@@ -4,6 +4,10 @@
 
 ## ChangeLog
 
+### 2.0.1
+
+- fixed setting error
+
 ### 2.0.0
 
 - refactory

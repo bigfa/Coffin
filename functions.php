@@ -15,6 +15,7 @@ require('inc/update.php');
 
 function coffin_get_background_image($post_id, $width = null, $height = null)
 {
+    global $coffinSetting;
     if (has_post_thumbnail($post_id)) {
         $timthumb_src = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full');
         $output       = $timthumb_src[0];
@@ -22,7 +23,7 @@ function coffin_get_background_image($post_id, $width = null, $height = null)
         $output = get_post_meta($post_id, '_banner', true);
     } else {
         $content         = get_post_field('post_content', $post_id);
-        $defaltthubmnail = get_template_directory_uri() . '/build/images/default.jpeg';
+        $defaltthubmnail = $coffinSetting->get_setting('default_thumbnail') ? $coffinSetting->get_setting('default_thumbnail') : get_template_directory_uri() . '/build/images/default.jpeg';
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
         $n = count($strResult[1]);
         if ($n > 0) {

@@ -242,9 +242,9 @@ $coffinSetting = new coffinSetting(
                     ],
                     [
                         'type' => 'input',
-                        'name' => 'banner',
-                        'label' => __('Banner', 'Coffin'),
-                        'description' => __('Header banner address.', 'Coffin'),
+                        'name' => 'logo',
+                        'label' => __('Logo', 'Coffin'),
+                        'description' => __('Logo address.', 'Coffin'),
                     ],
                     [
                         'type' => 'input',
@@ -360,18 +360,18 @@ $coffinSetting = new coffinSetting(
                     //     'label' => __('Image count', 'Coffin'),
                     //     'description' => __('Show image count of the post', 'Coffin')
                     // ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'hide_home_cover',
-                        'label' => __('Hide home cover', 'Coffin'),
-                        'description' => __('Hide home cover', 'Coffin')
-                    ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'exclude_status',
-                        'label' => __('Exclude status', 'Coffin'),
-                        'description' => __('Exclude post type status in homepage', 'Coffin')
-                    ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'hide_home_cover',
+                    //     'label' => __('Hide home cover', 'Coffin'),
+                    //     'description' => __('Hide home cover', 'Coffin')
+                    // ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'exclude_status',
+                    //     'label' => __('Exclude status', 'Coffin'),
+                    //     'description' => __('Exclude post type status in homepage', 'Coffin')
+                    // ],
                 ]
             ],
 
@@ -396,24 +396,24 @@ $coffinSetting = new coffinSetting(
                         'label' => __('Related posts', 'Coffin'),
                         'description' => __('Enable related posts', 'Coffin')
                     ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'postlike',
-                        'label' => __('Post like', 'Coffin'),
-                        'description' => __('Enable post like', 'Coffin')
-                    ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'postlike',
+                    //     'label' => __('Post like', 'Coffin'),
+                    //     'description' => __('Enable post like', 'Coffin')
+                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'post_navigation',
                         'label' => __('Post navigation', 'Coffin'),
                         'description' => __('Enable post navigation', 'Coffin')
                     ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'show_copylink',
-                        'label' => __('Copy link', 'Coffin'),
-                        'description' => __('Enable copy link', 'Coffin')
-                    ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'show_copylink',
+                    //     'label' => __('Copy link', 'Coffin'),
+                    //     'description' => __('Enable copy link', 'Coffin')
+                    // ],
                     // [
                     //     'type' => 'switch',
                     //     'name' => 'category_card',
@@ -438,12 +438,12 @@ $coffinSetting = new coffinSetting(
                     //     'label' => __('Start heading', 'Coffin'),
                     //     'description' => __('Start heading,default h3', 'Coffin')
                     // ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'show_rss_btn',
-                        'label' => __('RSS Button', 'Coffin'),
-                        'description' => __('Show RSS Button in meta', 'Coffin')
-                    ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'show_rss_btn',
+                    //     'label' => __('RSS Button', 'Coffin'),
+                    //     'description' => __('Show RSS Button in meta', 'Coffin')
+                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'disable_comment_link',
