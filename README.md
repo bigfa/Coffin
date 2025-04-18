@@ -4,6 +4,11 @@
 
 ## ChangeLog
 
+### 2.0.2
+
+- add footer setting
+- add comment class
+
 ### 2.0.1
 
 - fixed setting error

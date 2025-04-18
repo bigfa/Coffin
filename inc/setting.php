@@ -483,7 +483,7 @@ $coffinSetting = new coffinSetting(
                     [
                         'type' => 'switch',
                         'name' => 'footer_sns',
-                        'label' => __('Footer SNS Icons', 'Coffin'),
+                        'label' => __('SNS Icons', 'Coffin'),
                         'description' => __('Show sns icons in footer, if this setting is on, the footer menu won\',t be displayed.', 'Coffin')
                     ],
                     [

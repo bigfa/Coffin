@@ -46,7 +46,7 @@ global $coffinSetting;
         endif;
         ?>
         <?php
-        if ($coffinSetting->get_setting('related_post'))
+        if ($coffinSetting->get_setting('related'))
             get_template_part('template-part/single-related');
         ?>
     </main>

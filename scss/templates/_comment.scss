@@ -35,7 +35,7 @@
     }
 }
 
-.children {
+.depth-1 > .children {
     margin-left: 50px;
 }
 
@@ -158,14 +158,19 @@
     padding-bottom: 25px;
     text-align: right;
     .page-numbers {
-        background: #000 none repeat scroll 0 0;
-        border: 1px solid #000;
+        background: var(--coffin-main-color);
+        border: 1px solid var(--coffin-main-color);
         border-radius: 3px;
         color: #fff;
-        display: inline-block;
+        margin: 0 5px;
         font-size: 12px;
         line-height: 1;
         padding: 5px 8px;
+
+        &:hover {
+            background: var(--coffin-hover-color);
+            border: 1px solid var(--coffin-hover-color);
+        }
     }
 }
 
@@ -239,10 +244,6 @@
 
         &--meta {
             line-height: 1.4;
-        }
-
-        &--block {
-            padding: 15px 0;
         }
     }
 }

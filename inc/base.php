@@ -43,6 +43,7 @@ class coffinBase
             add_action('rss2_head', array($this, 'add_rss_tag'));
     }
 
+
     function add_rss_tag()
     {
         global $coffinSetting;

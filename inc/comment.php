@@ -261,7 +261,7 @@ function coffin_comment($comment, $args, $depth)
         default:
             global $post;
             ?>
-            <li class="comment" itemtype="http://schema.org/Comment" data-id="<?php comment_ID() ?>" itemscope="" itemprop="comment">
+            <li <?php comment_class(); ?> itemtype="http://schema.org/Comment" data-id="<?php comment_ID() ?>" itemscope="" itemprop="comment">
                 <div id="comment-<?php comment_ID() ?>" class="comment--block">
                     <div class="comment--info">
                         <div class="comment--avatar">
