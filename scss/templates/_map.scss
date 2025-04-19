@@ -48,6 +48,7 @@
         background-position: center;
         background-repeat: no-repeat;
         text-decoration: none !important;
+        height: 90px;
 
         .markerPro--content {
             flex: 1 1 auto;
@@ -81,14 +82,7 @@
         text-overflow: ellipsis;
         max-width: 100%;
         font-size: 16px;
-        color: var(--coffin-text-color);
-
-        a {
-            text-decoration: none;
-            &:hover {
-                color: var(--coffin-hover-color);
-            }
-        }
+        color: rgba(255, 255, 255, 0.9);
     }
 
     &--meta {

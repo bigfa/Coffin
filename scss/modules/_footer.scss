@@ -18,50 +18,6 @@ body.page {
     }
 }
 
-.site--footer {
-    &__sns {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        margin-top: 10px;
-        padding-bottom: 10px;
-        .is-singleColumn &,
-        .page-template-template-map &,
-        .page-template-template-wide & {
-            justify-content: center;
-        }
-
-        a {
-            margin: 0 0 0 12px;
-            display: flex;
-
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-
-        svg {
-            fill: var(--coffin-text-color);
-            width: 24px;
-            height: 24px;
-
-            &:hover {
-                fill: var(--coffin-hover-color);
-            }
-
-            &.sns {
-                fill: none;
-                stroke: var(--coffin-text-color);
-
-                &:hover {
-                    stroke: var(--coffin-hover-color);
-                    fill: none;
-                }
-            }
-        }
-    }
-}
-
 .backToTop {
     position: fixed;
     right: 60px;

@@ -10,7 +10,26 @@
 
 .entry {
     padding-top: 50px;
-    position: relative;
+
+    &__action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+
+        .button--like {
+            svg {
+                fill: var(--farallon-text-gray);
+            }
+
+            &:hover,
+            &.is-active {
+                svg {
+                    fill: var(--farallon-hover-color);
+                }
+            }
+        }
+    }
 
     &--related {
         display: grid;
@@ -297,5 +316,139 @@
             margin-bottom: 10px;
             text-align: center;
         }
+    }
+}
+
+.entry--author {
+    &__sns {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        .is-singleColumn &,
+        .page-template-template-map &,
+        .page-template-template-wide & {
+            justify-content: center;
+        }
+
+        a {
+            margin: 0 0 0 12px;
+            display: flex;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        svg {
+            fill: var(--coffin-text-color);
+            width: 24px;
+            height: 24px;
+
+            &:hover {
+                fill: var(--coffin-hover-color);
+            }
+
+            &.sns {
+                fill: none;
+                stroke: var(--coffin-text-color);
+
+                &:hover {
+                    stroke: var(--coffin-hover-color);
+                    fill: none;
+                }
+            }
+        }
+    }
+}
+
+.coffin--toc {
+    background-color: var(--coffin-background-gray);
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: var(--coffin-text-size-small);
+    margin-bottom: 15px;
+    color: var(--coffin-text-light);
+    summary {
+        cursor: pointer;
+    }
+    ul {
+        margin-bottom: 0 !important;
+        li {
+            margin-bottom: 0 !important;
+            margin-left: 20px !important;
+            &::before {
+                padding-right: 6px !important;
+            }
+        }
+    }
+    line-height: 1.5 !important;
+    a {
+        box-shadow: none !important;
+        text-decoration: none;
+        &:hover {
+            color: var(--coffin-hover-color);
+        }
+    }
+}
+
+.post--share {
+    svg {
+        height: 16px;
+        width: 16px;
+        fill: var(--coffin-text-gray);
+        margin-right: 4px;
+        flex: 0 0 auto;
+    }
+    .text {
+        flex: 0 0 auto;
+    }
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: var(--coffin-text-gray);
+    line-height: 1.2;
+    .link {
+        margin-left: 5px;
+        border-bottom: 1px dotted var(--coffin-hover-color);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    & + .authorCard {
+        margin-top: 20px;
+    }
+}
+
+.button--like {
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+
+    &.is-active {
+        svg {
+            fill: var(--coffin-main-color);
+        }
+
+        .icon--active {
+            display: block;
+        }
+
+        .icon--default {
+            display: none;
+        }
+    }
+
+    .icon--active {
+        display: none;
+    }
+
+    .icon--block {
+        display: none;
     }
 }

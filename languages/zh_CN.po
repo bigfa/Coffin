@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Coffin 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Coffin\n"
 "POT-Creation-Date: 2025-02-24T11:58:27+00:00\n"
-"PO-Revision-Date: 2025-04-18 15:42+0800\n"
+"PO-Revision-Date: 2025-04-19 15:20+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -51,11 +51,11 @@ msgstr "成功"
 
 #: inc/setting.php:47
 msgid "Setting saved success!"
-msgstr ""
+msgstr "设置保存成功"
 
 #: inc/setting.php:48
 msgid "Upload Image"
-msgstr ""
+msgstr "上传图片"
 
 #: inc/setting.php:56 inc/setting.php:62
 msgid "Theme Setting"
@@ -203,11 +203,11 @@ msgstr ""
 
 #: inc/setting.php:318
 msgid "Dark Mode"
-msgstr ""
+msgstr "暗黑模式"
 
 #: inc/setting.php:319
 msgid "Enable dark mode"
-msgstr ""
+msgstr "开启暗黑模式开关"
 
 #: inc/setting.php:324
 msgid "Default thumbnail"
@@ -219,11 +219,11 @@ msgstr ""
 
 #: inc/setting.php:330
 msgid "Back to top"
-msgstr ""
+msgstr "返回顶部"
 
 #: inc/setting.php:331
 msgid "Enable back to top"
-msgstr ""
+msgstr "开启返回顶部按钮"
 
 #: inc/setting.php:366 inc/setting.php:367
 msgid "Hide home cover"
@@ -239,7 +239,7 @@ msgstr ""
 
 #: inc/setting.php:396
 msgid "Related posts"
-msgstr ""
+msgstr "相关文章"
 
 #: inc/setting.php:397
 msgid "Enable related posts"
@@ -247,7 +247,7 @@ msgstr ""
 
 #: inc/setting.php:402
 msgid "Post like"
-msgstr ""
+msgstr "文章点赞"
 
 #: inc/setting.php:403
 msgid "Enable post like"
@@ -263,7 +263,7 @@ msgstr ""
 
 #: inc/setting.php:414
 msgid "Copy link"
-msgstr ""
+msgstr "复制文字链接"
 
 #: inc/setting.php:415
 msgid "Enable copy link"

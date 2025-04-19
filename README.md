@@ -4,6 +4,13 @@
 
 ## ChangeLog
 
+### 2.0.4
+
+- update translation
+- add toc
+- add postlike
+- add copy permalink
+
 ### 2.0.3
 
 - update translation

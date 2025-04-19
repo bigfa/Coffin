@@ -23,47 +23,82 @@
     }
 }
 
-.sandraItem-image {
+.sandraItem {
     position: relative;
-    a {
-        display: block;
-        height: 240px;
-        background-size: cover;
-        background-position: 50%;
+    background-color: var(--coffin-background-white);
+    transition: 0.5s transform;
+    overflow: hidden;
+    transform: translateZ(0);
+    display: flex;
+    flex-direction: column;
+    // border-radius: 5px;
+    .flag {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    &:hover {
+        transform: translate3d(0, -6px, 0);
+    }
+
+    &-image {
         position: relative;
-        &::after {
-            // content: '';
+        a {
             display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: linear-gradient(
-                180deg,
-                rgba(0, 0, 0, 0.1) 0%,
-                rgba(0, 0, 0, 0.4) 100%
-            );
-            z-index: 1;
+            height: 240px;
+            background-size: cover;
+            background-position: 50%;
+            position: relative;
+        }
+
+        img {
+            display: block;
             border-radius: 3px 3px 0 0;
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--coffin-main-color);
+            font-size: 40px;
         }
     }
 
-    img {
-        display: block;
-        border-radius: 3px 3px 0 0;
-        height: 240px;
-        width: 100%;
-        object-fit: cover;
+    &--content {
+        padding: 15px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
     }
 
-    .icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: var(--coffin-main-color);
-        font-size: 40px;
+    &-info {
+        color: var(--coffin-text-gray-lightest);
+        font-size: 14px;
+        padding-top: 5px;
+        margin-top: auto;
+        a {
+            &:hover {
+                text-decoration: underline;
+                color: var(--coffin-text-color);
+            }
+        }
+    }
+
+    &-title {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.3;
+        &:hover {
+            color: var(--coffin-hover-color);
+        }
     }
 }
 
@@ -93,64 +128,5 @@
         a {
             height: 100%;
         }
-    }
-}
-
-.sandraItem {
-    position: relative;
-    background-color: var(--coffin-background-white);
-    transition: 0.5s transform;
-    overflow: hidden;
-    transform: translateZ(0);
-    display: flex;
-    flex-direction: column;
-    .flag {
-        width: 24px;
-        height: 24px;
-        position: absolute;
-        right: 15px;
-        bottom: 15px;
-    }
-
-    &:hover {
-        transform: translate3d(0, -6px, 0);
-    }
-
-    &--content {
-        padding: 15px;
-        flex: 1 1 auto;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.sandraItem-author {
-    font-size: 12px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    strong {
-        font-weight: 700;
-    }
-}
-
-.sandraItem-info {
-    color: var(--coffin-text-gray-lightest);
-    font-size: 14px;
-    padding-top: 5px;
-    margin-top: auto;
-    a {
-        &:hover {
-            text-decoration: underline;
-            color: var(--coffin-text-color);
-        }
-    }
-}
-
-.sandraItem-title {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.3;
-    &:hover {
-        color: var(--coffin-hover-color);
     }
 }

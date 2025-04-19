@@ -396,24 +396,24 @@ $coffinSetting = new coffinSetting(
                         'label' => __('Related posts', 'Coffin'),
                         'description' => __('Enable related posts', 'Coffin')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'postlike',
-                    //     'label' => __('Post like', 'Coffin'),
-                    //     'description' => __('Enable post like', 'Coffin')
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'postlike',
+                        'label' => __('Post like', 'Coffin'),
+                        'description' => __('Enable post like', 'Coffin')
+                    ],
                     [
                         'type' => 'switch',
                         'name' => 'post_navigation',
                         'label' => __('Post navigation', 'Coffin'),
                         'description' => __('Enable post navigation', 'Coffin')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'show_copylink',
-                    //     'label' => __('Copy link', 'Coffin'),
-                    //     'description' => __('Enable copy link', 'Coffin')
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'show_copylink',
+                        'label' => __('Copy link', 'Coffin'),
+                        'description' => __('Enable copy link', 'Coffin')
+                    ],
                     // [
                     //     'type' => 'switch',
                     //     'name' => 'category_card',
@@ -426,18 +426,18 @@ $coffinSetting = new coffinSetting(
                         'label' => __('Show parent comment', 'Coffin'),
                         'description' => __('Enable show parent comment', 'Coffin')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'toc',
-                    //     'label' => __('Table of content', 'Coffin'),
-                    //     'description' => __('Enable table of content', 'Coffin')
-                    // ],
-                    // [
-                    //     'type' => 'input',
-                    //     'name' => 'toc_start',
-                    //     'label' => __('Start heading', 'Coffin'),
-                    //     'description' => __('Start heading,default h3', 'Coffin')
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'toc',
+                        'label' => __('Table of content', 'Coffin'),
+                        'description' => __('Enable table of content', 'Coffin')
+                    ],
+                    [
+                        'type' => 'input',
+                        'name' => 'toc_start',
+                        'label' => __('Start heading', 'Coffin'),
+                        'description' => __('Start heading,default h3', 'Coffin')
+                    ],
                     // [
                     //     'type' => 'switch',
                     //     'name' => 'show_rss_btn',
