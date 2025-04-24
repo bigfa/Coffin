@@ -75,7 +75,7 @@ function setting() {
 
 // Watch files
 function watchFiles() {
-    gulp.watch(['./ts/ts.js'], gulp.series(typescripts));
+    gulp.watch(['./ts/ts.js', './ts/modules/*'], gulp.series(typescripts));
     gulp.watch(['./scss/app.scss', './scss/modules/*', './scss/templates/*'], gulp.series(css));
     gulp.watch(['./scss/setting.scss'], gulp.series(settingCss));
     gulp.watch(['./js/setting.ts'], gulp.series(setting));

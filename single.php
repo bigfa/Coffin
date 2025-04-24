@@ -17,6 +17,12 @@ global $coffinSetting;
             <div class="grap entry--content" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
+            <?php wp_link_pages(array(
+                'before'      => '<div class="nav-links nav-links__comment">',
+                'after'       => '</div>',
+                'pagelink'    => '%',
+                'separator'   => '<span class="screen-reader-text">, </span>',
+            )); ?>
             <?php if ($coffinSetting->get_setting('postlike')) : ?>
                 <div class="entry__action">
                     <button class="button--like like-btn" aria-label="like the post">

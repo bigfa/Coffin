@@ -4,6 +4,11 @@
 
 ## ChangeLog
 
+### 2.0.5
+
+- fixed child comment render error
+- add article page nav
+
 ### 2.0.4
 
 - update translation
