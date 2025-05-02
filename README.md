@@ -4,6 +4,10 @@
 
 ## ChangeLog
 
+### 2.0.6
+
+- enable image cdn
+
 ### 2.0.5
 
 - fixed child comment render error

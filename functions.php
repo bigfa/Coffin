@@ -30,8 +30,24 @@ function coffin_get_background_image($post_id, $width = null, $height = null)
             $output = $strResult[1][0];
         } else {
             $output = $defaltthubmnail;
+            return $output;
         }
     }
+
+    if ($height && $width) {
+        if ($coffinSetting->get_setting('upyun')) {
+            $output = $output . "!/both/{$width}x{$height}";
+        }
+
+        if ($coffinSetting->get_setting('oss')) {
+            $output = $output . "?x-oss-process=image/crop,w_{$width},h_{$height}";
+        }
+
+        if ($coffinSetting->get_setting('qiniu')) {
+            $output = $output . "?imageView2/1/w/{$width}/h/{$height}";
+        }
+    }
+
     return $output;
 }
 
