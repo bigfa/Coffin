@@ -4,6 +4,11 @@
 
 ## ChangeLog
 
+### 2.1.0
+
+- add blogroll template
+- fixed some style issues
+
 ### 2.0.7
 
 - fixed some style issues

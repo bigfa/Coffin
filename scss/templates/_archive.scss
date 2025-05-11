@@ -189,3 +189,61 @@
         font-size: 14px;
     }
 }
+
+.link-title {
+    font-weight: bold;
+}
+
+.link-description {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--coffin-text-gray);
+    margin-top: 5px;
+}
+
+.link-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    .link-item {
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+
+        border-radius: 5px;
+        background-color: var(--coffin-background-gray-light);
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s ease;
+
+        &:hover {
+            background-color: var(--coffin-background-gray);
+            transform: translateY(-2px);
+        }
+
+        .sitename {
+            font-size: 12px;
+            line-height: 1.4;
+            color: var(--coffin-text-gray);
+            max-height: 2.8em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .link-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

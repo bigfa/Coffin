@@ -116,6 +116,48 @@
         overflow-x: auto;
     }
 
+    table {
+        border: 1px solid var(--coffin-border-color);
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+        color: var(--coffin-text-light);
+
+        thead {
+            tr {
+                background-color: #f5f5f5;
+            }
+        }
+
+        tr {
+            background-color: #fff;
+
+            &:hover {
+                & > td {
+                    background-color: #f5f5f5;
+                    background-clip: padding-box;
+                }
+            }
+        }
+
+        td,
+        th {
+            border-bottom: 1px solid var(--coffin-border-color);
+            border-right: 1px solid var(--coffin-border-color);
+            transition: background-color 0.25s ease;
+            height: 40px;
+            min-width: 0;
+            box-sizing: border-box;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+            position: relative;
+            margin: 0;
+            padding: 0 10px;
+        }
+    }
+
     &--figure {
         margin-bottom: 15px;
         display: flex;
@@ -130,63 +172,23 @@
         }
     }
 
+    figure {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+
+        .wp-caption {
+            font-size: 14px;
+            color: var(--coffin-text-gray-lightest);
+            text-align: center;
+            padding-top: 5px;
+        }
+    }
+
     img {
         border-radius: 5px;
-    }
-}
-
-.mixtapeImage {
-    float: right;
-    width: 160px;
-    height: 160px;
-    margin: -24px -24px -24px 48px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
-}
-
-.graf--mixtapeEmbed {
-    position: relative;
-    overflow: hidden;
-    max-height: 280px;
-    padding: 24px;
-    box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-    border-radius: 3px;
-    margin: 20px 0;
-
-    a {
-        text-decoration: none !important;
-    }
-
-    &-strong {
-        color: rgba(0, 0, 0, 0.8);
-        display: block;
-        margin-bottom: 8px;
-        font-size: 20px;
-        line-height: 1.2;
-    }
-}
-
-.markup--em {
-    display: block;
-    font-size: 14px;
-    font-style: normal !important;
-}
-
-.markup--meta {
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.8);
-}
-
-@media screen and (max-width: 640px) {
-    .graf--mixtapeEmbed {
-        padding: 12px;
-    }
-
-    .mixtapeImage {
-        display: none;
     }
 }
 
@@ -194,4 +196,14 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 20px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 20px;
 }
