@@ -1,4 +1,4 @@
-<article class="sandraItem<?php if (get_the_ID() == 102750) echo ' sandraItem--full'; ?>" itemscope="itemscope" itemtype="http://schema.org/Article">
+<article class="sandraItem<?php if (get_post_meta('_fullImage')) echo ' sandraItem--full'; ?>" itemscope="itemscope" itemtype="http://schema.org/Article">
     <div class="sandraItem-image">
         <a style="background-image: url(<?php echo coffin_get_background_image($post->ID, 800, 480); ?>);" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" aria-label="<?php the_title(); ?>">
         </a>

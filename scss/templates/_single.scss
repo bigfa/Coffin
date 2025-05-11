@@ -222,7 +222,7 @@
     z-index: 100;
 }
 
-@media (max-width: 1768px) {
+@media (max-width: 1000px) {
     .entry {
         &--related {
             display: grid;
@@ -237,6 +237,18 @@
                 font-size: 16px;
                 line-height: 1.5;
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .entry {
+        &--related {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 20px;
+            position: static;
+            width: auto;
         }
     }
 }
@@ -273,17 +285,6 @@
 
         .cover--link {
             position: relative;
-            .marker--tips {
-                position: absolute;
-                bottom: 5px;
-                right: 5px;
-                background-color: #f8f8f8;
-                border-radius: 5px;
-                padding: 5px;
-                font-size: 12px;
-                color: var(--coffin-text-gray);
-                line-height: 1;
-            }
         }
     }
 

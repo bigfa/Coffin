@@ -4,6 +4,10 @@
 
 ## ChangeLog
 
+### 2.0.7
+
+- fixed some style issues
+
 ### 2.0.6
 
 - enable image cdn
