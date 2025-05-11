@@ -11,7 +11,7 @@
                                                 echo $favicon; ?>" rel="shortcut icon">
 </head>
 
-<body <?php body_class('is-noJs'); ?>>
+<body <?php body_class(); ?>>
     <?php
     global $coffinSetting;
     if ($coffinSetting->get_setting('darkmode')) : ?>

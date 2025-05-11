@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="layoutSingleColumn">
+<div class="layoutSingleColumn  min-height-100">
     <article class="entry" itemscope="itemscope" itemtype="http://schema.org/Article">
         <?php while (have_posts()) : the_post(); ?>
             <header class="entry--header">

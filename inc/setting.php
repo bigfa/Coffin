@@ -342,18 +342,18 @@ $coffinSetting = new coffinSetting(
                     //     'label' => __('Author info', 'Coffin'),
                     //     'description' => __('Enable author info in homepage', 'Coffin')
                     // ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'home_cat',
-                    //     'label' => __('Category info', 'Coffin'),
-                    //     'description' => __('Enable category info in homepage', 'Coffin')
-                    // ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'home_like',
-                    //     'label' => __('Like info', 'Coffin'),
-                    //     'description' => __('Enable like info in homepage', 'Coffin')
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'home_cat',
+                        'label' => __('Category info', 'Coffin'),
+                        'description' => __('Enable category info in homepage', 'Coffin')
+                    ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'home_views',
+                        'label' => __('Views info', 'Coffin'),
+                        'description' => __('Enable views info in homepage', 'Coffin')
+                    ],
                     // [
                     //     'type' => 'switch',
                     //     'name' => 'home_image_count',

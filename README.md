@@ -4,6 +4,13 @@
 
 ## ChangeLog
 
+### 2.1.1
+
+- fixed some style issues
+- update translation
+- add setting for post info of post card
+- add some filters
+
 ### 2.1.0
 
 - add blogroll template
