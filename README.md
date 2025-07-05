@@ -4,6 +4,10 @@
 
 ## ChangeLog
 
+### 2.1.2
+
+- fixed some style issues
+
 ### 2.1.1
 
 - fixed some style issues
