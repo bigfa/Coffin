@@ -327,23 +327,7 @@ class coffinBase
                 'version' => COFFIN_VERSION,
                 'is_archive' => is_archive(),
                 'archive_id' => get_queried_object_id(),
-                'hide_home_cover' => !!$coffinSetting->get_setting('hide_home_cover'),
-                'timeFormat' => [
-                    'second' => __('second ago', 'Coffin'),
-                    'seconds' => __('seconds ago', 'Coffin'),
-                    'minute' => __('minute ago', 'Coffin'),
-                    'minutes' => __('minutes ago', 'Coffin'),
-                    'hour' => __('hour ago', 'Coffin'),
-                    'hours' => __('hours ago', 'Coffin'),
-                    'day' => __('day ago', 'Coffin'),
-                    'days' => __('days ago', 'Coffin'),
-                    'week' => __('week ago', 'Coffin'),
-                    'weeks' => __('weeks ago', 'Coffin'),
-                    'month' => __('month ago', 'Coffin'),
-                    'months' => __('months ago', 'Coffin'),
-                    'year' => __('year ago', 'Coffin'),
-                    'years' => __('years ago', 'Coffin'),
-                ]
+                'hide_home_cover' => !!$coffinSetting->get_setting('hide_home_cover')
             ]
         );
         if ($coffinSetting->get_setting('javascript')) {

@@ -33,7 +33,7 @@ class coffinPost extends coffinBase {
                     ? `<article class="post--item post--item__status" itemtype="http://schema.org/Article" itemscope="itemscope">
     <div class="content">
         <header>
-            <img alt="" src="${post.author_avatar_urls}" class="avatar avatar-48 photo" height="48" width="48" decoding="async">            <a itemprop="datePublished" datetime="" class="humane--time" href="${post.permalink}" aria-label="${post.post_title}">${post.date}</a>
+            <img alt="" src="${post.author_avatar_urls}" class="avatar avatar-48 photo" height="48" width="48" decoding="async">            <a itemprop="datePublished" datetime="" href="${post.permalink}" aria-label="${post.post_title}">${post.date}</a>
         </header>
                     <div class="description" itemprop="about"><p>${post.excerpt}</p>
 </div>
@@ -50,8 +50,8 @@ class coffinPost extends coffinBase {
                     <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
                         <path d="M512 97.52381c228.912762 0 414.47619 185.563429 414.47619 414.47619s-185.563429 414.47619-414.47619 414.47619S97.52381 740.912762 97.52381 512 283.087238 97.52381 512 97.52381z m0 73.142857C323.486476 170.666667 170.666667 323.486476 170.666667 512s152.81981 341.333333 341.333333 341.333333 341.333333-152.81981 341.333333-341.333333S700.513524 170.666667 512 170.666667z m36.571429 89.697523v229.86362h160.865523v73.142857H512a36.571429 36.571429 0 0 1-36.571429-36.571429V260.388571h73.142858z"></path>
                     </svg>
-                    <time itemprop="datePublished" datetime="" class="humane--time">${post.date}</time>
-                                                    </div>
+                    <time itemprop="datePublished" datetime="">${post.date}</time>
+                    </div>
             </div>${thumbnail}
             </article>`;
             })
@@ -79,7 +79,7 @@ class coffinPost extends coffinBase {
             <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
                 <path d="M512 97.52381c228.912762 0 414.47619 185.563429 414.47619 414.47619s-185.563429 414.47619-414.47619 414.47619S97.52381 740.912762 97.52381 512 283.087238 97.52381 512 97.52381z m0 73.142857C323.486476 170.666667 170.666667 323.486476 170.666667 512s152.81981 341.333333 341.333333 341.333333 341.333333-152.81981 341.333333-341.333333S700.513524 170.666667 512 170.666667z m36.571429 89.697523v229.86362h160.865523v73.142857H512a36.571429 36.571429 0 0 1-36.571429-36.571429V260.388571h73.142858z"></path>
             </svg>
-            <time itemprop="datePublished" datetime="" class="humane--time">${post.date}</time>
+            <time itemprop="datePublished" datetime="">${post.date}</time>
             <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
                 <path d="M669.013333 596.21181l194.389334 226.791619A77.433905 77.433905 0 0 1 804.59581 950.857143H212.016762a77.433905 77.433905 0 0 1-58.782476-127.853714l194.413714-226.791619c22.918095 13.897143 47.737905 24.941714 74.044952 32.597333l-209.67619 244.614095h592.579048l-209.676191-244.614095a308.102095 308.102095 0 0 0 74.069333-32.597333zM508.294095 73.142857c142.57981 0 258.145524 115.565714 258.145524 258.145524 0 142.57981-115.565714 258.145524-258.145524 258.145524-142.57981 0-258.145524-115.565714-258.145524-258.145524C250.148571 188.732952 365.714286 73.142857 508.318476 73.142857z m0 77.433905a180.711619 180.711619 0 1 0 0 361.423238 180.711619 180.711619 0 0 0 0-361.423238z"></path>
             </svg>

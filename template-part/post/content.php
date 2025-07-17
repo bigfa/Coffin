@@ -11,8 +11,8 @@
             </h2>
         </div>
         <div class="sandraItem-info">
-            <time itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>" class="humane--time">
-                <?php echo get_the_date('m d,Y'); ?>
+            <time itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>">
+                <?php echo human_time_diff(get_the_time('U'), current_time('U')) . __('ago', 'Coffin'); ?>
             </time>
             <?php if ($coffinSetting->get_setting('home_cat')) : ?>
                 <span class="middotDivider"></span>

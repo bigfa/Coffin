@@ -4,6 +4,12 @@
 
 ## ChangeLog
 
+### 2.1.3
+
+- style enhancement
+- update translation
+- use php time format
+
 ### 2.1.2
 
 - fixed some style issues

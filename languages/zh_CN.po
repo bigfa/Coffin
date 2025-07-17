@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Coffin 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Coffin\n"
 "POT-Creation-Date: 2025-02-24T11:58:27+00:00\n"
-"PO-Revision-Date: 2025-05-12 00:18+0800\n"
+"PO-Revision-Date: 2025-07-17 17:41+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -64,6 +64,11 @@ msgstr "作者"
 #: inc/comment.php:205 inc/comment.php:231 inc/setting.php:28
 msgid "Success"
 msgstr "成功"
+
+#: inc/comment.php:273 single.php:10 template-part/post/content.php:15
+#: template-part/single-related.php:44
+msgid "ago"
+msgstr "前"
 
 #: inc/setting.php:47
 msgid "Setting saved success!"
@@ -438,58 +443,6 @@ msgstr "版权信息"
 #: inc/setting.php:564
 msgid "Custom footer content"
 msgstr "自定义底部版权信息"
-
-#: modules/base.php:191
-msgid "second ago"
-msgstr "秒前"
-
-#: modules/base.php:192
-msgid "seconds ago"
-msgstr "秒前"
-
-#: modules/base.php:193
-msgid "minute ago"
-msgstr "分钟前"
-
-#: modules/base.php:194
-msgid "minutes ago"
-msgstr "分钟前"
-
-#: modules/base.php:195
-msgid "hour ago"
-msgstr "小时前"
-
-#: modules/base.php:196
-msgid "hours ago"
-msgstr "小时前"
-
-#: modules/base.php:197
-msgid "day ago"
-msgstr "天前"
-
-#: modules/base.php:198
-msgid "days ago"
-msgstr "天前"
-
-#: modules/base.php:199
-msgid "week ago"
-msgstr "周前"
-
-#: modules/base.php:200
-msgid "weeks ago"
-msgstr "周天"
-
-#: modules/base.php:201
-msgid "month ago"
-msgstr "个月前"
-
-#: modules/base.php:202
-msgid "months ago"
-msgstr "个月前"
-
-#: modules/base.php:203
-msgid "year ago"
-msgstr "年前"
 
 #. Template Name of the theme
 msgid "文章归档模版"

@@ -40,8 +40,8 @@
                         <?php the_title(); ?>
                     </div>
                     <div class="meta">
-                        <time datetime="<?php echo get_the_date('c'); ?>" class="humane--time">
-                            <?php echo get_the_date('Y-m-d'); ?>
+                        <time datetime="<?php echo get_the_date('c'); ?>">
+                            <?php echo human_time_diff(get_the_time('U'), current_time('U')) . __('ago', 'Coffin'); ?>
                         </time>
                         <span class="middotDivider"></span>
                         <?php the_category(',') ?>
