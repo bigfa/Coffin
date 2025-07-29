@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Coffin 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Coffin\n"
 "POT-Creation-Date: 2025-02-24T11:58:27+00:00\n"
-"PO-Revision-Date: 2025-07-17 17:41+0800\n"
+"PO-Revision-Date: 2025-07-29 10:25+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -40,6 +40,14 @@ msgstr "1 浏览"
 #: functions.php:159
 msgid "%d views"
 msgstr "%d 浏览"
+
+#: functions.php:190
+msgid "1 min read"
+msgstr "1 分钟阅读"
+
+#: functions.php:192
+msgid "%d min read"
+msgstr "%d 分钟阅读"
 
 #. Description of the theme
 #: style.css

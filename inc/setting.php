@@ -354,12 +354,12 @@ $coffinSetting = new coffinSetting(
                         'label' => __('Views info', 'Coffin'),
                         'description' => __('Enable views info in homepage', 'Coffin')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'home_image_count',
-                    //     'label' => __('Image count', 'Coffin'),
-                    //     'description' => __('Show image count of the post', 'Coffin')
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'home_readtime',
+                        'label' => __('Reading time', 'Coffin'),
+                        'description' => __('Show reading time of the post', 'Coffin')
+                    ],
                     // [
                     //     'type' => 'switch',
                     //     'name' => 'hide_home_cover',

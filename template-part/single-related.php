@@ -45,6 +45,8 @@
                         </time>
                         <span class="middotDivider"></span>
                         <?php the_category(',') ?>
+                        <span class="middotDivider"></span>
+                        <?php echo coffin_get_post_read_time_text(get_the_ID()); ?>
                     </div>
                 </a>
             </div>

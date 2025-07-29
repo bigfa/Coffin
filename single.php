@@ -7,7 +7,8 @@ global $coffinSetting;
             <header class="entry--header">
                 <?php do_action('marker_pro_flag', get_the_ID()); ?>
                 <div class="entry--meta">
-                    <time itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>"><?php echo human_time_diff(get_the_time('U'), current_time('U')) . __('ago', 'Coffin'); ?></time><span class="middotDivider"></span><?php the_category(',') ?><span class="middotDivider"></span><?php echo coffin_get_post_views_text(false, false, false, get_the_ID()); ?>
+                    <time itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>"><?php echo human_time_diff(get_the_time('U'), current_time('U')) . __('ago', 'Coffin'); ?></time><span class="middotDivider"></span><?php the_category(',') ?><span class="middotDivider"></span><?php echo coffin_get_post_views_text(false, false, false, get_the_ID()); ?><span class="middotDivider"></span>
+                    <?php echo coffin_get_post_read_time_text(get_the_ID()); ?>
                 </div>
                 <?php the_title('<h2 class="entry--title" itemprop="headline">', '</h2>'); ?>
             </header>

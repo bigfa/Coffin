@@ -22,6 +22,10 @@
                 <span class="middotDivider"></span>
                 <?php echo coffin_get_post_views_text(false, false, false, get_the_ID()); ?>
             <?php endif; ?>
+            <?php if ($coffinSetting->get_setting('home_readtime')) : ?>
+                <span class="middotDivider"></span>
+                <?php echo coffin_get_post_read_time_text(get_the_ID()); ?>
+            <?php endif; ?>
         </div>
         <?php do_action('marker_pro_flag', get_the_ID()); ?>
     </div>
