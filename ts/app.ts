@@ -1,21 +1,34 @@
+interface ObvInit {
+    like_success_text(like_success_text: any, arg1: string): unknown;
+    copy_success_text(copy_success_text: any, arg1: string): unknown;
+    now_text: any;
+    comment_success_text(comment_success_text: any, arg1: string): unknown;
+    archive_id: any;
+    nonce: string;
+    restfulBase: string;
+    is_single: boolean;
+    post_id: number;
+    is_archive: boolean;
+    darkmode: boolean;
+    version: string;
+}
+
 class coffinBase {
     is_single: boolean = false;
     post_id: number = 0;
     is_archive: boolean = false;
     darkmode: any = false;
     VERSION: string;
+    obvInit: ObvInit;
 
     constructor() {
-        //@ts-ignore
+        const obvInit = (window as any).obvInit as ObvInit;
         this.is_single = obvInit.is_single;
-        //@ts-ignore
         this.post_id = obvInit.post_id;
-        //@ts-ignore
         this.is_archive = obvInit.is_archive;
-        //@ts-ignore
         this.darkmode = obvInit.darkmode;
-        //@ts-ignore
         this.VERSION = obvInit.version;
+        this.obvInit = obvInit;
     }
 
     getCookie(t: any) {

@@ -15,7 +15,7 @@ global $coffinSetting;
             <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="<?php the_permalink(); ?>" />
             <meta itemprop="datePublished" content="<?php echo esc_attr(get_the_date('c')); ?>" />
             <meta itemprop="dateModified" content="<?php echo esc_attr(get_the_modified_date('c')); ?>" />
-            <div class="grap entry--content" itemprop="articleBody">
+            <div class="cGraph entry--content" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
             <?php wp_link_pages(array(

@@ -9,7 +9,7 @@ $authorId = get_query_var('author'); ?>
         echo '<p>' . get_the_author_meta('description', $authorId) . '</p>';
         ?>
     </header>
-    <div class="sandraList">
+    <div class="cCard--list">
         <?php while (have_posts()) : the_post(); ?>
             <?php get_template_part('template-part/post/content'); ?>
         <?php endwhile; ?>

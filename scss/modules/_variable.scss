@@ -1,7 +1,6 @@
 :root {
-    // --coffin-main-color: #27ae60;
-    --coffin-main-color: #88b04b; //#4370f5;
-    --coffin-hover-color: #43883d; // #3a5f9a;
+    --coffin-main-color: #88b04b;
+    --coffin-hover-color: #43883d;
     --coffin-text-color: rgba(0, 0, 0, 0.84);
     --coffin-text-light: rgba(0, 0, 0, 0.68);
     --coffin-text-gray: rgba(0, 0, 0, 0.6);
@@ -81,8 +80,6 @@
 }
 
 .dark {
-    // --coffin-main-color: rgba(253, 186, 116, 1);
-    // --coffin-hover-color: rgba(255, 237, 213, 1);
     --coffin-text-color: #a1a1aa;
     --coffin-text-light: rgba(161, 161, 170, 1);
     --coffin-text-gray: rgba(113, 113, 122, 1);

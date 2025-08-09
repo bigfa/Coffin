@@ -6,12 +6,9 @@ class coffinAction extends coffinBase {
     is_archive: boolean = false;
     constructor() {
         super();
-        //@ts-ignore
-        this.is_single = obvInit.is_single;
-        //@ts-ignore
-        this.post_id = obvInit.post_id;
-        //@ts-ignore
-        this.is_archive = obvInit.is_archive;
+        this.is_single = this.obvInit.is_single;
+        this.post_id = this.obvInit.post_id;
+        this.is_archive = this.obvInit.is_archive;
         this.like_btn = document.querySelector(this.selctor);
         if (this.like_btn) {
             this.like_btn.addEventListener('click', () => {
@@ -66,27 +63,22 @@ class coffinAction extends coffinBase {
                 document.querySelectorAll('.fixed--theme span').forEach((item) => {
                     item.classList.remove('is-active');
                 });
-                // @ts-ignore
-                if (item.dataset.actionValue == 'dark') {
+                const actionValue = (item as HTMLElement).dataset.actionValue;
+                if (actionValue == 'dark') {
                     localStorage.setItem('theme', 'dark');
                     document.querySelector('body')!.classList.remove('auto');
                     document.querySelector('body')!.classList.add('dark');
                     item.classList.add('is-active');
-                    //this.showNotice('夜间模式已开启');
-                    // @ts-ignore
-                } else if (item.dataset.actionValue == 'light') {
+                } else if (actionValue == 'light') {
                     localStorage.setItem('theme', 'light');
                     document.querySelector('body')!.classList.remove('auto');
                     document.querySelector('body')!.classList.remove('dark');
                     item.classList.add('is-active');
-                    //this.showNotice('夜间模式已关闭');
-                    // @ts-ignore
-                } else if (item.dataset.actionValue == 'auto') {
+                } else if (actionValue == 'auto') {
                     localStorage.setItem('theme', 'auto');
                     document.querySelector('body')!.classList.remove('dark');
                     document.querySelector('body')!.classList.add('auto');
                     item.classList.add('is-active');
-                    //this.showNotice('夜间模式已关闭');
                 }
             });
         });
@@ -94,7 +86,7 @@ class coffinAction extends coffinBase {
         if (document.querySelector('.post--share')) {
             document.querySelector('.post--share')!.addEventListener('click', () => {
                 navigator.clipboard.writeText(document.location.href).then(() => {
-                    this.showNotice('复制成功');
+                    this.showNotice(this.obvInit.copy_success_text);
                 });
             });
         }
@@ -111,15 +103,20 @@ class coffinAction extends coffinBase {
     }
 
     trackPostView() {
-        //@ts-ignore
-        const id = obvInit.post_id;
-        //@ts-ignore
+        const id = this.obvInit.post_id;
+        let url = this.obvInit.restfulBase + 'coffin/v1/view';
+        // add params id, url may already contains params
+        const params = new URLSearchParams();
+        params.append('id', String(id));
+        if (url.includes('?')) {
+            url += '&' + params.toString();
+        } else {
+            url += '?' + params.toString();
+        }
 
-        const url = obvInit.restfulBase + 'coffin/v1/view?id=' + id;
         fetch(url, {
             headers: {
-                // @ts-ignore
-                'X-WP-Nonce': obvInit.nonce,
+                'X-WP-Nonce': this.obvInit.nonce,
                 'Content-Type': 'application/json',
             },
         })
@@ -133,57 +130,37 @@ class coffinAction extends coffinBase {
 
     trackArchiveView() {
         if (document.querySelector('.archive-header')) {
-            // @ts-ignore
-            const id = obvInit.archive_id;
-            // @ts-ignore
-            fetch(`${obvInit.restfulBase}coffin/v1/archive/${id}`, {
+            const id = this.obvInit.archive_id;
+            fetch(`${this.obvInit.restfulBase}coffin/v1/archive/${id}`, {
                 method: 'POST',
-                // body: JSON.stringify({
-                //     // @ts-ignore
-                //     id: this.post_id,
-                // }),
                 headers: {
-                    // @ts-ignore
-                    'X-WP-Nonce': obvInit.nonce,
+                    'X-WP-Nonce': this.obvInit.nonce,
                     'Content-Type': 'application/json',
                 },
-            })
-                .then((response) => {
-                    return response.json();
-                })
-                .then((data) => {
-                    //this.showNotice('Thanks for your like');
-                    // @ts-ignore
-                    //this.setCookie('like_' + this.post_id, '1', 1);
-                });
+            });
         }
     }
 
     handleLike() {
-        // @ts-ignore
         if (this.getCookie('like_' + this.post_id)) {
             return this.showNotice('You have already liked this post');
         }
-        // @ts-ignore
-        const url = obvInit.restfulBase + 'coffin/v1/like';
+        const url = this.obvInit.restfulBase + 'coffin/v1/like';
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({
-                // @ts-ignore
                 id: this.post_id,
             }),
             headers: {
-                // @ts-ignore
-                'X-WP-Nonce': obvInit.nonce,
+                'X-WP-Nonce': this.obvInit.nonce,
                 'Content-Type': 'application/json',
             },
         })
             .then((response) => {
                 return response.json();
             })
-            .then((data) => {
-                this.showNotice('Thanks for your like');
-                // @ts-ignore
+            .then(() => {
+                this.showNotice(this.obvInit.like_success_text);
                 this.setCookie('like_' + this.post_id, '1', 1);
             });
         this.like_btn.classList.add('is-active');

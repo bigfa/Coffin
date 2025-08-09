@@ -11,7 +11,7 @@
 $previou_post = get_previous_post();
 $next_post = get_next_post();
 ?>
-<nav class="navigation post-navigation is-active" aria-label="<?php _e('Post', 'Coffin'); ?>">
+<nav class="navigation post-navigation" aria-label="<?php _e('Post', 'Coffin'); ?>">
     <?php if ($previou_post) : ?>
         <div class="nav-previous">
             <a href="<?php echo get_permalink($previou_post->ID) ?>" rel="prev">
@@ -23,7 +23,6 @@ $next_post = get_next_post();
             <?php if (coffin_is_has_image($previou_post->ID)) : ?>
                 <a href="<?php the_permalink($previou_post->ID); ?>" aria-label="<?php the_title($previou_post->ID); ?>" class="cover--link">
                     <img alt="<?php echo get_the_title($previou_post->ID); ?>" src="<?php echo coffin_get_background_image($previou_post->ID, 400, 120); ?>" class="cover" />
-                    <?php do_action('marker_pro_post_meta', $previou_post->ID); ?>
                 </a>
             <?php endif ?>
         </div>
@@ -39,7 +38,6 @@ $next_post = get_next_post();
             <?php if (coffin_is_has_image($next_post->ID)) : ?>
                 <a href="<?php the_permalink($next_post->ID); ?>" aria-label="<?php the_title($next_post->ID); ?>" class="cover--link">
                     <img src="<?php echo coffin_get_background_image($next_post->ID, 400, 120); ?>" class="cover" alt="<?php echo get_the_title($next_post->ID); ?>" />
-                    <?php do_action('marker_pro_post_meta', $next_post->ID); ?>
                 </a>
             <?php endif ?>
         </div>

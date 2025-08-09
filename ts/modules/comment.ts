@@ -11,19 +11,15 @@ class coffinComment extends coffinBase {
                 e.preventDefault();
                 if (this.loading) return;
                 const form = document.querySelector('.comment-form') as HTMLFormElement;
-                // @ts-ignore
                 const formData = new FormData(form);
-                // @ts-ignore
                 const formDataObj: { [index: string]: any } = {};
                 formData.forEach((value, key: any) => (formDataObj[key] = value));
                 this.loading = true;
-                // @ts-ignore
-                fetch(obvInit.restfulBase + 'coffin/v1/comment', {
+                fetch(this.obvInit.restfulBase + 'coffin/v1/comment', {
                     method: 'POST',
                     body: JSON.stringify(formDataObj),
                     headers: {
-                        // @ts-ignore
-                        'X-WP-Nonce': obvInit.nonce,
+                        'X-WP-Nonce': this.obvInit.nonce,
                         'Content-Type': 'application/json',
                     },
                 })
@@ -39,45 +35,53 @@ class coffinComment extends coffinBase {
                             i = document.getElementById('respond'),
                             n = document.getElementById('wp-temp-form-div');
                         const comment = data.data;
-                        const html = `<li class="comment" id="comment-${comment.comment_ID}">
-                        <article class="comment--block comment-body__fresh">
-                            <footer class="comment--info">
-                                <div class="comment--avatar">
+                        const html = `<li class="comment cComment--item" id="comment-${comment.comment_ID}">
+                        <article class="cComment--block comment-body__fresh">
+                            <footer class="cComment--info">
+                                <div class="cComment--avatar">
                                     <img alt="" src="${comment.author_avatar_urls}" class="avatar" height="42" width="42" />
                                 </div>
-                                <div class="comment--meta">
-                                    <div class="comment--author">${comment.comment_author}</div>
-
-                                    <time class="comment--time">刚刚</time>
+                                <div class="cComment--meta">
+                                    <div class="cComment--author">${comment.comment_author}</div>
+                                    <time class="cComment--time">${this.obvInit.now_text}</time>
                                 </div>
                                 </div>
                             </footer>
-                            <div class="comment-content comment--content">
+                            <div class="cComment--content">
                                 ${comment.comment_content}
                             </div>
                         </article>
-                    </li>`; // @ts-ignore
-                        const parent_id = document.querySelector('#comment_parent')?.value;
-                        // @ts-ignore
-                        (a.style.display = 'none'), // @ts-ignore
-                            (a.onclick = null), // @ts-ignore
-                            (document.getElementById('comment_parent').value = '0'),
-                            n && // @ts-ignore
-                                i && // @ts-ignore
-                                (n.parentNode.insertBefore(i, n), n.parentNode.removeChild(n));
+                    </li>`;
+                        const parent_id = (
+                            document.querySelector('#comment_parent') as HTMLInputElement
+                        )?.value;
+                        if (a) {
+                            a.style.display = 'none';
+                            a.onclick = null;
+                        }
+                        const commentParentInput = document.getElementById(
+                            'comment_parent'
+                        ) as HTMLInputElement | null;
+                        if (commentParentInput) {
+                            commentParentInput.value = '0';
+                        }
+                        n &&
+                            i &&
+                            n.parentNode &&
+                            (n.parentNode.insertBefore(i, n), n.parentNode.removeChild(n));
                         if (document.querySelector('.comment-body__fresh'))
                             document
                                 .querySelector('.comment-body__fresh')
                                 ?.classList.remove('comment-body__fresh');
-                        // @ts-ignore
-                        document.getElementById('comment').value = '';
-                        // @ts-ignore
+                        const commentInput = document.getElementById(
+                            'comment'
+                        ) as HTMLInputElement | null;
+                        if (commentInput) {
+                            commentInput.value = '';
+                        }
                         if (parent_id != '0') {
                             document
-                                .querySelector(
-                                    // @ts-ignore
-                                    '#comment-' + parent_id
-                                )
+                                .querySelector('#comment-' + parent_id)
                                 ?.insertAdjacentHTML(
                                     'beforeend',
                                     '<ol class="children">' + html + '</ol>'
@@ -88,7 +92,7 @@ class coffinComment extends coffinBase {
                                 document.querySelector('.no--comment')?.remove();
                             }
                             document
-                                .querySelector('.commentlist')
+                                .querySelector('.cComment--list')
                                 ?.insertAdjacentHTML('beforeend', html);
                         }
 
@@ -100,7 +104,7 @@ class coffinComment extends coffinBase {
                             newComment.scrollIntoView({ behavior: 'smooth' });
                         }
 
-                        this.showNotice('评论成功');
+                        this.showNotice(this.obvInit.comment_success_text);
                     });
             });
         }

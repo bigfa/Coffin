@@ -261,19 +261,19 @@ function coffin_comment($comment, $args, $depth)
         default:
             global $post;
             ?>
-            <li <?php comment_class(); ?> itemtype="http://schema.org/Comment" data-id="<?php comment_ID() ?>" itemscope="" itemprop="comment" id="comment-<?php comment_ID() ?>">
-                <div class="comment--block">
-                    <div class="comment--info">
-                        <div class="comment--avatar">
+            <li <?php comment_class('cComment--item'); ?> itemtype="http://schema.org/Comment" data-id="<?php comment_ID() ?>" itemscope="" itemprop="comment" id="comment-<?php comment_ID() ?>">
+                <div class="cComment--block">
+                    <div class="cComment--info">
+                        <div class="cComment--avatar">
                             <?php echo get_avatar($comment, 42); ?>
                         </div>
-                        <div class="comment--meta">
-                            <div class="comment--author" itemprop="author"><?php echo get_comment_author_link(); ?>
+                        <div class="cComment--meta">
+                            <div class="cComment--author" itemprop="author"><?php echo get_comment_author_link(); ?>
                                 <?php echo '<span class="comment-reply-link" onclick="return addComment.moveForm(\'comment-' . $comment->comment_ID . '\', \'' . $comment->comment_ID . '\', \'respond\', \'' . $post->ID . '\')">回复</span>'; ?></div>
-                            <div class="comment--time" itemprop="datePublished" datetime="<?php echo get_comment_date('c'); ?>"><?php echo human_time_diff(get_comment_time('U'), current_time('U')) . __('ago', 'Coffin'); ?></div>
+                            <div class="cComment--time" itemprop="datePublished" datetime="<?php echo get_comment_date('c'); ?>"><?php echo human_time_diff(get_comment_time('U'), current_time('U')) . __('ago', 'Coffin'); ?></div>
                         </div>
                     </div>
-                    <div class="comment--content comment-content" itemprop="description">
+                    <div class="cComment--content" itemprop="description">
                         <?php comment_text(); ?>
                     </div>
                 </div>

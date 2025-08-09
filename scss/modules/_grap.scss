@@ -1,4 +1,4 @@
-.grap {
+.cGraph {
     ol,
     ul {
         margin-bottom: 15px;
@@ -158,54 +158,7 @@
         }
     }
 
-    &--figure {
-        margin-bottom: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .imageCaption {
-            font-size: 14px;
-            color: var(--coffin-text-gray-lightest);
-            text-align: center;
-            padding-top: 5px;
-        }
-    }
-
-    figure {
-        margin-bottom: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-
-        .wp-caption {
-            font-size: 14px;
-            color: var(--coffin-text-gray-lightest);
-            text-align: center;
-            padding-top: 5px;
-        }
-    }
-
     img {
         border-radius: 5px;
     }
-}
-
-.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.alignleft {
-    float: left;
-    margin-right: 20px;
-}
-
-.alignright {
-    float: right;
-    margin-left: 20px;
 }

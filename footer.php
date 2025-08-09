@@ -1,5 +1,5 @@
-<footer class="site-footer">
-    <div class="layoutSingleColumn--wide">
+<footer class="cFooter">
+    <div class="cFooter--content">
         <?php global $coffinSetting;
         if ($coffinSetting->get_setting('copyright')) {
             echo $coffinSetting->get_setting('copyright');

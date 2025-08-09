@@ -1,15 +1,16 @@
-.site-footer,
+.cFooter,
 body.single,
 body.page {
     background-color: var(--coffin-background-white);
 }
 
-.site-footer {
+.cFooter {
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 14px;
     color: var(--coffin-text-gray-lightest);
     text-align: center;
+
     a {
         &:hover {
             text-decoration: underline;

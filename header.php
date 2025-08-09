@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="<?php echo get_locale(); ?>">
 <?php global $coffinSetting; ?>
 
 <head>
@@ -30,9 +30,13 @@
     <?php endif; ?>
     <header class="metabar">
         <div class="layoutSingleColumn--wide metabar--inner">
-            <a href="<?php echo home_url(); ?>" class="u-flex"><img class="logo logo--rounded" src="<?php
-                                                                                                    $logo = $coffinSetting->get_setting('logo') ? $coffinSetting->get_setting('logo') : get_template_directory_uri() . '/build/images/logo.png';
-                                                                                                    echo $logo; ?>" width=38 /></a>
+            <a href="<?php echo home_url(); ?>" class="u-flex">
+                <?php if ($coffinSetting->get_setting('logo')) : ?>
+                    <img class="logo logo--rounded" src="<?php echo $coffinSetting->get_setting('logo'); ?>" width=38 />
+                <?php else: ?>
+                    <span class="logo logo--rounded"><?php bloginfo('name'); ?></span>
+                <?php endif; ?>
+            </a>
             <?php if (has_nav_menu('coffin')) : ?>
                 <?php wp_nav_menu(array('theme_location' => 'coffin', 'menu_class' => 'subnav-ul', 'container' => 'ul')); ?>
             <?php endif; ?>

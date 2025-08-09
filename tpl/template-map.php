@@ -1,6 +1,7 @@
 <?php
 /*
-Template Name: 地图
+Template Name: Map
+Template Post Type: page
 */
 ?>
 <?php get_header(); ?>

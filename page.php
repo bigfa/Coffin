@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <div class="layoutSingleColumn  min-height-100">
-    <article class="entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <article class="cArticle" itemscope="itemscope" itemtype="http://schema.org/Article">
         <?php while (have_posts()) : the_post(); ?>
-            <header class="entry--header">
-                <?php the_title('<h2 class="entry--title" itemprop="headline">', '</h2>'); ?>
+            <header class="cArticle--header">
+                <?php the_title('<h2 class="cArticle--title" itemprop="headline">', '</h2>'); ?>
             </header>
-            <div class="grap entry--content" itemprop="articleBody">
+            <div class="cGraph cArticle--content" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
             <?php wp_link_pages(array(

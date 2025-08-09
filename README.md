@@ -4,6 +4,11 @@
 
 ## ChangeLog
 
+### 2.2.0
+
+- add japanese support
+- remove default logo image
+
 ### 2.1.4
 
 - add post read time

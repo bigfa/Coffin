@@ -327,7 +327,11 @@ class coffinBase
                 'version' => COFFIN_VERSION,
                 'is_archive' => is_archive(),
                 'archive_id' => get_queried_object_id(),
-                'hide_home_cover' => !!$coffinSetting->get_setting('hide_home_cover')
+                'hide_home_cover' => !!$coffinSetting->get_setting('hide_home_cover'),
+                'comment_success_text' => __('Comment submitted successfully!', 'Coffin'),
+                'now_text' => __('Just now', 'Coffin'),
+                'copy_success_text' => __('Link copied to clipboard!', 'Coffin'),
+                'like_success_text' => __('Thanks for your like!', 'Coffin'),
             ]
         );
         if ($coffinSetting->get_setting('javascript')) {

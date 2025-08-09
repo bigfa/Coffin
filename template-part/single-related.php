@@ -8,9 +8,9 @@
  * @since Hera 2.0.0
  */
 ?>
-<section class="related--posts">
-    <h3 class="related--posts__title"><?php _e('Related Posts', 'Coffin'); ?></h3>
-    <div class="entry--related">
+<section class="cRelated--area">
+    <h3 class="cRelated--heroTitle"><?php _e('Related Posts', 'Coffin'); ?></h3>
+    <div class="cRelated--list">
         <?php
         // get same format related posts
         $the_query = new WP_Query(array(
@@ -29,17 +29,17 @@
             ) : array()
         ));
         while ($the_query->have_posts()) : $the_query->the_post(); ?>
-            <div class="entry--related__item">
+            <div class="cRelated--item">
                 <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
                     <?php if (coffin_is_has_image(get_the_ID())) : ?>
-                        <div class="entry--related__img">
+                        <div class="cRelated--image">
                             <img src="<?php echo coffin_get_background_image(get_the_ID(), 400, 200); ?>" class="cover" alt="<?php the_title(); ?>" />
                         </div>
                     <?php endif; ?>
-                    <div class="entry--related__title">
+                    <div class="cRelated--title">
                         <?php the_title(); ?>
                     </div>
-                    <div class="meta">
+                    <div class="cRelated--meta">
                         <time datetime="<?php echo get_the_date('c'); ?>">
                             <?php echo human_time_diff(get_the_time('U'), current_time('U')) . __('ago', 'Coffin'); ?>
                         </time>

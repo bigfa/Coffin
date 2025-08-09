@@ -5,8 +5,11 @@
 @use 'modules/header';
 @use 'modules/block';
 @use 'modules/grap';
+@use 'modules/relatedPost';
+@use 'modules/comment';
 
 @use 'templates/single';
-@use 'templates/comment';
 @use 'templates/archive';
 @use 'templates/map';
+@use 'templates/term';
+@use 'utilities/wp';

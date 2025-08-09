@@ -98,17 +98,12 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-.screen-reader-text {
-    left: -9999px;
-    position: absolute;
-    top: -9999px;
-}
-
 .layoutSingleColumn {
     max-width: var(--coffin-content-width);
     margin-right: auto;
     margin-left: auto;
     width: 90%;
+
     &--page {
         max-width: var(--coffin-content-width);
     }
@@ -121,10 +116,12 @@ svg:not(:root) {
     }
 }
 
-.middotDivider:after {
-    content: '/';
-    margin-left: 8px;
-    margin-right: 8px;
+.middotDivider {
+    &::after {
+        content: '/';
+        margin-left: 8px;
+        margin-right: 8px;
+    }
 }
 
 .u-paddingTop50 {
@@ -148,13 +145,6 @@ svg:not(:root) {
     padding-bottom: 50px;
 }
 
-.page-wrapper {
-    background-color: #fff;
-    padding: 30px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
 .post-actions {
     padding-bottom: 10px;
 }
@@ -169,6 +159,7 @@ svg:not(:root) {
 .pagination {
     padding-top: 50px;
     padding-bottom: 50px;
+
     .page-numbers {
         background-color: var(--coffin-background-gray);
         color: var(--coffin-text-gray);
@@ -177,6 +168,7 @@ svg:not(:root) {
         margin-left: 8px;
         margin-right: 8px;
         font-size: 14px;
+
         &.current,
         &:hover {
             background-color: var(--coffin-hover-color);
@@ -220,10 +212,8 @@ svg:not(:root) {
     left: 50%;
     transform: translateX(-50%);
     transition: 0.5s transform;
-}
 
-@media (max-width: 768px) {
-    .notice--wrapper {
+    @media (max-width: 768px) {
         width: 80%;
     }
 }

@@ -1,50 +1,48 @@
-.sandraList {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 22px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    & + .pagination {
-        padding-top: 0px;
-    }
-}
+.cCard {
+    &--list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 22px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        & + .pagination {
+            padding-top: 0px;
+        }
 
-@media (max-width: 1024px) {
-    .sandraList {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 25px;
-    }
-}
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 25px;
+        }
 
-@media (max-width: 600px) {
-    .sandraList {
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-    }
-}
-
-.sandraItem {
-    position: relative;
-    background-color: var(--coffin-background-white);
-    transition: 0.5s transform;
-    overflow: hidden;
-    transform: translateZ(0);
-    display: flex;
-    flex-direction: column;
-    // border-radius: 5px;
-    .flag {
-        width: 24px;
-        height: 24px;
-        position: absolute;
-        right: 15px;
-        bottom: 15px;
+        @media (max-width: 600px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 30px;
+        }
     }
 
-    &:hover {
-        transform: translate3d(0, -6px, 0);
+    &--item {
+        position: relative;
+        background-color: var(--coffin-background-white);
+        transition: 0.5s transform;
+        overflow: hidden;
+        transform: translateZ(0);
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+            transform: translate3d(0, -6px, 0);
+        }
+
+        .flag {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+        }
     }
 
-    &-image {
+    &--image {
         position: relative;
         a {
             display: block;
@@ -79,11 +77,12 @@
         flex-direction: column;
     }
 
-    &-info {
+    &--info {
         color: var(--coffin-text-gray-lightest);
         font-size: 14px;
         padding-top: 5px;
         margin-top: auto;
+
         a {
             &:hover {
                 text-decoration: underline;
@@ -92,7 +91,7 @@
         }
     }
 
-    &-title {
+    &--title {
         font-size: 18px;
         font-weight: 400;
         line-height: 1.3;

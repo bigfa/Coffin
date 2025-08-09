@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main class="layoutSingleColumn--wide min-height-100">
-    <div class="sandraList">
+    <div class="cCard--list">
         <?php while (have_posts()) : the_post(); ?>
             <?php get_template_part('template-part/post/content'); ?>
         <?php endwhile; ?>

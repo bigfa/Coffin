@@ -118,6 +118,10 @@
 .sep {
     &::before {
         content: '·';
+        margin: 0 5px;
     }
-    margin: 0 5px;
+}
+
+.footer-map {
+    height: 65vh;
 }

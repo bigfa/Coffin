@@ -53,32 +53,14 @@
 .logo {
     position: relative;
     z-index: 1;
+    font-size: 18px;
+    font-weight: bold;
+
+    &:hover {
+        color: var(--coffin-hover-color);
+    }
+
     &--rounded {
         border-radius: 100%;
-    }
-}
-
-.search-form {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    .search-submit {
-        display: none;
-    }
-
-    .search-field {
-        border-radius: 999rem;
-        border: 0;
-        background-color: var(--coffin-background-gray);
-        font-size: 12px;
-        padding: 6px 25px;
-        line-height: 1.8;
-        width: 240px;
-        color: var(--coffin-text-gray);
-
-        &:focus {
-            outline: none;
-            color: var(--coffin-text-color);
-        }
     }
 }
