@@ -4,6 +4,10 @@
 
 ## ChangeLog
 
+### 2.2.2
+
+- style enhancement
+
 ### 2.2.1
 
 - update translation
