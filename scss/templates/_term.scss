@@ -4,6 +4,10 @@
         align-items: center;
         padding-top: 50px;
         padding-bottom: 15px;
+
+        @media (max-width: 768px) {
+            padding-top: 60px;
+        }
     }
 
     &--image {
@@ -13,6 +17,12 @@
         flex: 0 0 auto;
         margin-right: 20px;
         border-radius: 3px;
+
+        @media (max-width: 768px) {
+            width: 48px;
+            height: 48px;
+            margin-right: 10px;
+        }
     }
 
     &--content {
@@ -23,10 +33,19 @@
     &--name {
         margin-bottom: 15px;
         font-size: 24px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
     }
 
     &--description {
         color: var(--coffin-text-gray);
         font-size: 14px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 }

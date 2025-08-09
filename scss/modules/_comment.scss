@@ -16,6 +16,10 @@
     &--block {
         padding: 25px 0;
         border-bottom: 1px solid var(--coffin-border-color-light);
+
+        @media screen and (max-width: 768px) {
+            padding: 15px 0;
+        }
     }
 
     &--info {
@@ -50,7 +54,7 @@
     }
 
     &--content {
-        padding: 5px;
+        padding: 5px 5px 0;
         color: var(--coffin-text-light);
         font-size: 14px;
     }
@@ -112,6 +116,10 @@
 
 .depth-1 > .children {
     margin-left: 50px;
+
+    @media (max-width: 768px) {
+        margin-left: 25px;
+    }
 }
 
 .no--comment {

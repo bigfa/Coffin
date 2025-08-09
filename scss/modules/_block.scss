@@ -6,6 +6,8 @@
         padding-top: 50px;
         padding-bottom: 50px;
 
+        --coffin-card-image-height: 240px;
+
         & + .pagination {
             padding-top: 0px;
         }
@@ -17,7 +19,10 @@
 
         @media (max-width: 600px) {
             grid-template-columns: repeat(1, 1fr);
-            grid-gap: 30px;
+            grid-gap: 15px;
+            padding-bottom: 25px;
+            padding-top: 25px;
+            --coffin-card-image-height: 200px;
         }
     }
 
@@ -48,7 +53,7 @@
 
         a {
             display: block;
-            height: 240px;
+            height: var(--coffin-card-image-height);
             background-size: cover;
             background-position: 50%;
             position: relative;
@@ -57,7 +62,7 @@
         img {
             display: block;
             border-radius: 3px 3px 0 0;
-            height: 240px;
+            height: var(--coffin-card-image-height);
             width: 100%;
             object-fit: cover;
         }

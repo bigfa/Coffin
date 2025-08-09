@@ -164,6 +164,10 @@
     border-top: 1px solid var(--coffin-border-color-light);
     padding: 50px 0;
 
+    @media (max-width: 768px) {
+        padding: 25px 0;
+    }
+
     .avatar {
         mask-position: center;
         mask-repeat: no-repeat;
@@ -182,6 +186,7 @@
 
     &--title {
         font-weight: bold;
+
         &:hover {
             color: var(--coffin-hover-color);
         }

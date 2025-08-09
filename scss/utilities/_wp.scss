@@ -183,6 +183,12 @@ figure {
     margin-bottom: 10px;
     font-size: 18px;
     color: var(--coffin-text-gray);
+    display: flex;
+    align-items: center;
+
+    small {
+        margin-left: auto;
+    }
 }
 
 .required {
