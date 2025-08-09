@@ -21,7 +21,6 @@ class coffinBase
         register_nav_menu('coffin', __('Primary Menu', 'Coffin'));
         add_theme_support('post-formats', array('status'));
         add_filter('pre_option_link_manager_enabled', '__return_true');
-        add_action('widgets_init', array($this, 'widgets_init'));
         add_action('wp_head', array($this, 'head_output'), 11);
         add_action('edit_category_form_fields', array($this, 'add_category_cover_form_item'));
         add_action('edited_terms', array($this, 'update_my_category_fields'));
@@ -160,7 +159,7 @@ class coffinBase
             $toc .= str_repeat('</li></ul>', $previous_level - 2);
             $toc .= '</ul>';
 
-            $content = '<details class="coffin--toc" open><summary>' . __('Table of content', 'Coffin') . '</summary>' . $toc . '</details>' . $content;
+            $content = '<details class="cArticle--toc" open><summary>' . __('Table of content', 'Coffin') . '</summary>' . $toc . '</details>' . $content;
         }
 
         return $content;
@@ -214,40 +213,6 @@ class coffinBase
             if ($description) echo '<meta name="description" content="' . $description . '">';
         }
         echo $ogmeta;
-    }
-
-    function widgets_init()
-    {
-
-        register_sidebar(array(
-            'name'          => __('Homepage Top', 'Coffin'),
-            'id'            => 'topbar',
-            'description'   => __('Homepage Top', 'Coffin'),
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '<h3 class="heading-title">',
-            'after_title'   => '</h3>',
-        ));
-
-        register_sidebar(array(
-            'name'          => __('Homepage Bottom', 'Coffin'),
-            'id'            => 'footerbar',
-            'description'   => __('Homepage Bottom', 'Coffin'),
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '<h3 class="heading-title">',
-            'after_title'   => '</h3>',
-        ));
-
-        register_sidebar(array(
-            'name'          => __('Single Pgae Bottom', 'Coffin'),
-            'id'            => 'singlefooterbar',
-            'description'   => __('Single Pgae Bottom', 'Coffin'),
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '<h3 class="heading-title">',
-            'after_title'   => '</h3>',
-        ));
     }
 
     function custom_excerpt_length($excerpt)

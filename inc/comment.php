@@ -174,7 +174,7 @@ class coffinComment
                 $name        = $parent->comment_author;
 
                 $comment_text =
-                    '<a href="' . $parent_link . '" class="comment--parent__link">@' . $name . '</a>'
+                    '<a href="' . $parent_link . '" class="cComment--parent">@' . $name . '</a>'
                     . $comment_text;
             }
         }
@@ -270,7 +270,7 @@ function coffin_comment($comment, $args, $depth)
                         <div class="cComment--meta">
                             <div class="cComment--author" itemprop="author"><?php echo get_comment_author_link(); ?>
                                 <?php echo '<span class="comment-reply-link" onclick="return addComment.moveForm(\'comment-' . $comment->comment_ID . '\', \'' . $comment->comment_ID . '\', \'respond\', \'' . $post->ID . '\')">回复</span>'; ?></div>
-                            <div class="cComment--time" itemprop="datePublished" datetime="<?php echo get_comment_date('c'); ?>"><?php echo human_time_diff(get_comment_time('U'), current_time('U')) . __('ago', 'Coffin'); ?></div>
+                            <div class="cComment--time" itemprop="datePublished" datetime="<?php echo get_comment_date('c'); ?>"><?php echo human_time_diff(get_comment_time('U'), current_time('U')) . __(' ago', 'Coffin'); ?></div>
                         </div>
                     </div>
                     <div class="cComment--content" itemprop="description">

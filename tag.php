@@ -1,13 +1,11 @@
 <?php get_header(); ?>
 
 <main class="layoutSingleColumn--wide min-height-100">
-    <header class="archive-header u-textAlignCenter">
-        <header class="cTerm--header">
-            <div class="cTerm--content">
-                <h1 class="cTerm--name"><?php single_term_title('', true); ?></h1>
-                <?php the_archive_description('<div class="cTerm--description"', '</div>'); ?>
-            </div>
-        </header>
+    <header class="cTerm--header">
+        <div class="cTerm--content">
+            <h1 class="cTerm--name"><?php single_term_title('', true); ?></h1>
+            <?php the_archive_description('<div class="cTerm--description"', '</div>'); ?>
+        </div>
     </header>
     <div class="cCard--list">
         <?php while (have_posts()) : the_post(); ?>

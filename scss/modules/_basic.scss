@@ -128,12 +128,6 @@ svg:not(:root) {
     padding-top: 50px;
 }
 
-@media (max-width: 600px) {
-    .pagination {
-        text-align: center;
-    }
-}
-
 .u-textAlignCenter {
     text-align: center;
 }
@@ -143,50 +137,6 @@ svg:not(:root) {
     padding-top: 50px;
     text-align: center;
     padding-bottom: 50px;
-}
-
-.post-actions {
-    padding-bottom: 10px;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    background-color: var(--coffin-background-white);
-    padding: 20px;
-}
-
-.pagination {
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    .page-numbers {
-        background-color: var(--coffin-background-gray);
-        color: var(--coffin-text-gray);
-        padding: 3px 12px;
-        border-radius: 3px;
-        margin-left: 8px;
-        margin-right: 8px;
-        font-size: 14px;
-
-        &.current,
-        &:hover {
-            background-color: var(--coffin-hover-color);
-            color: var(--coffin-background-white);
-        }
-
-        &.dots {
-            &:hover {
-                background-color: var(--coffin-background-gray);
-                color: var(--coffin-text-gray);
-            }
-        }
-
-        &.current,
-        &.dots {
-            cursor: not-allowed;
-        }
-    }
 }
 
 .u-flex {

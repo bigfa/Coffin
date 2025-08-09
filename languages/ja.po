@@ -1,0 +1,545 @@
+# Copyright (C) 2025 bigfa
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Coffin 2.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Coffin\n"
+"POT-Creation-Date: 2025-08-08T15:28:48+00:00\n"
+"PO-Revision-Date: 2025-08-09 13:34+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Domain: Coffin\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Coffin"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://fatesinger.com/100095"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "theme 2017"
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "bigfa"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://github.com/bigfa"
+msgstr ""
+
+#: comments.php:25
+msgid "This post has no comment yet"
+msgstr "この投稿にはまだコメントがありません"
+
+#: functions.php:155
+msgid "No views yet"
+msgstr "まだ表示されていません"
+
+#: functions.php:157
+msgid "1 view"
+msgstr "1 回表示"
+
+#: functions.php:159
+msgid "%d views"
+msgstr "%d 回表示"
+
+#: functions.php:190
+msgid "1 min read"
+msgstr "1 分で読めます"
+
+#: functions.php:192
+msgid "%d min read"
+msgstr "%d 分で読めます"
+
+#: inc/base.php:21
+msgid "Primary Menu"
+msgstr "プライマリーメニュー"
+
+#: inc/base.php:115
+msgid "Cover"
+msgstr "カバー"
+
+#: inc/base.php:117
+msgid "Upload"
+msgstr "アップロード"
+
+#: inc/base.php:118
+msgid "Category cover url."
+msgstr "カテゴリカバーのURL"
+
+#: inc/base.php:163 inc/setting.php:432
+msgid "Table of content"
+msgstr "目次"
+
+#: inc/base.php:186
+msgid "author"
+msgstr "著者"
+
+#: inc/base.php:186
+msgid "published on"
+msgstr "公開日"
+
+#: inc/base.php:223 inc/base.php:225
+msgid "Homepage Top"
+msgstr "ホームページ上部"
+
+#: inc/base.php:233 inc/base.php:235
+msgid "Homepage Bottom"
+msgstr "ホームページ下部"
+
+#: inc/base.php:243 inc/base.php:245
+msgid "Single Page Bottom"
+msgstr "シングルページ下部"
+
+#: inc/base.php:286 inc/setting.php:47
+msgid "Setting saved success!"
+msgstr "設定が保存されました"
+
+#: inc/base.php:287 inc/setting.php:48
+msgid "Upload Image"
+msgstr "画像をアップロード"
+
+#: inc/base.php:288
+msgid "Set Category Image"
+msgstr "カテゴリ画像を設定"
+
+#: inc/comment.php:85
+msgid "Author"
+msgstr "著者"
+
+#: inc/comment.php:143 inc/comment.php:162 inc/comment.php:192
+#: inc/comment.php:205 inc/comment.php:231 inc/setting.php:28
+msgid "Success"
+msgstr "成功"
+
+#: inc/comment.php:273 single.php:10 template-part/post/content.php:15
+#: template-part/single-related.php:44
+msgid " ago"
+msgstr "前"
+
+#: inc/setting.php:56 inc/setting.php:62
+msgid "Theme Setting"
+msgstr "テーマ設定"
+
+#: inc/setting.php:63 inc/setting.php:86
+msgid "Documentation"
+msgstr "ドキュメンテーション"
+
+#: inc/setting.php:113
+msgid "Save"
+msgstr "保存"
+
+#: inc/setting.php:202
+msgid "Basic Setting"
+msgstr "基本設定"
+
+#: inc/setting.php:207
+msgid "Feature Setting"
+msgstr "機能設定"
+
+#: inc/setting.php:213
+msgid "Singluar Setting"
+msgstr "単数設定"
+
+#: inc/setting.php:218
+msgid "SNS Setting"
+msgstr "SNS設定"
+
+#: inc/setting.php:223
+msgid "Custom Setting"
+msgstr "カスタム設定"
+
+#: inc/setting.php:234
+msgid "Description"
+msgstr "説明"
+
+#: inc/setting.php:235
+msgid "Site description"
+msgstr "サイトの説明"
+
+#: inc/setting.php:240
+msgid "Headcode"
+msgstr "ヘッドコード"
+
+#: inc/setting.php:241
+msgid ""
+"You can add content to the head tag, such as site verification tags, and so "
+"on."
+msgstr "ヘッドタグにサイトの検証タグなどのコンテンツを追加できます。"
+
+#: inc/setting.php:246
+msgid "Logo"
+msgstr "ロゴ"
+
+#: inc/setting.php:247
+msgid "Logo address."
+msgstr "ロゴのURL"
+
+#: inc/setting.php:252
+msgid "Og default thumb"
+msgstr "OGデフォルトサムネイル"
+
+#: inc/setting.php:253
+msgid "Og meta default thumb address."
+msgstr "OGメタデフォルトサムネイルのURL"
+
+#: inc/setting.php:258
+msgid "Favicon"
+msgstr "ファビコン"
+
+#: inc/setting.php:259
+msgid "Favicon address"
+msgstr "ファビコンのURL"
+
+#: inc/setting.php:264
+msgid "Title sep"
+msgstr "タイトル区切り"
+
+#: inc/setting.php:265
+msgid "Default is"
+msgstr "デフォルトは"
+
+#: inc/setting.php:270
+msgid "Disable block css"
+msgstr "ブロックCSSを無効にする"
+
+#: inc/setting.php:271
+msgid "Do not load block-style files."
+msgstr "ブロックスタイルファイルを読み込まない。"
+
+#: inc/setting.php:276
+msgid "Gravatar proxy"
+msgstr "Gravatarプロキシ"
+
+#: inc/setting.php:277
+msgid "Gravatar proxy domain,like <code>cravatar.cn</code>"
+msgstr "Gravatarプロキシのドメイン、例えば<code>cravatar.cn</code>"
+
+#: inc/setting.php:282
+msgid "RSS Tag"
+msgstr "RSSタグ"
+
+#: inc/setting.php:283
+msgid "You can add tag in rss to verify follow."
+msgstr "フォローを確認するためにRSSにタグを追加できます。"
+
+#: inc/setting.php:294
+msgid "Update notice"
+msgstr "更新通知"
+
+#: inc/setting.php:295
+msgid "Get theme update notice."
+msgstr "テーマの更新通知を受け取る。"
+
+#: inc/setting.php:300
+msgid "Upyun CDN"
+msgstr "Upyun CDN"
+
+#: inc/setting.php:301
+msgid ""
+"Make sure all images are uploaded to Upyun, otherwise thumbnails may not "
+"display properly."
+msgstr ""
+"すべての画像がUpyunにアップロードされていることを確認してください。そうしない"
+"と、サムネイルが正しく表示されない場合があります。"
+
+#: inc/setting.php:306
+msgid "Aliyun OSS CDN"
+msgstr "Aliyun OSS CDN"
+
+#: inc/setting.php:307
+msgid ""
+"Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may not "
+"display properly."
+msgstr ""
+"すべての画像がAliyun OSSにアップロードされていることを確認してください。そうし"
+"ないと、サムネイルが正しく表示されない場合があります。"
+
+#: inc/setting.php:312
+msgid "Qiniu OSS CDN"
+msgstr "Qiniu OSS CDN"
+
+#: inc/setting.php:313
+msgid ""
+"Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not "
+"display properly."
+msgstr ""
+"すべての画像がQiniu OSSにアップロードされていることを確認してください。そうし"
+"ないと、サムネイルが正しく表示されない場合があります。"
+
+#: inc/setting.php:318
+msgid "Dark Mode"
+msgstr "ダークモード"
+
+#: inc/setting.php:319
+msgid "Enable dark mode"
+msgstr "ダークモードを有効にする"
+
+#: inc/setting.php:324
+msgid "Default thumbnail"
+msgstr "デフォルトサムネイル"
+
+#: inc/setting.php:325
+msgid "Default thumbnail address"
+msgstr "デフォルトサムネイルのURL"
+
+#: inc/setting.php:330
+msgid "Back to top"
+msgstr "トップに戻る"
+
+#: inc/setting.php:331
+msgid "Enable back to top"
+msgstr "トップに戻るを有効にする"
+
+#: inc/setting.php:348
+msgid "Category info"
+msgstr "カテゴリー情報"
+
+#: inc/setting.php:349
+msgid "Enable category info in homepage"
+msgstr "ホームページにカテゴリー情報を表示する"
+
+#: inc/setting.php:354
+msgid "Views info"
+msgstr "ビュー情報"
+
+#: inc/setting.php:355
+msgid "Enable views info in homepage"
+msgstr "ホームページにビュー情報を表示する"
+
+#: inc/setting.php:360
+msgid "Reading time"
+msgstr "読書時間"
+
+#: inc/setting.php:361
+msgid "Show reading time of the post"
+msgstr "投稿の読書時間を表示する"
+
+#: inc/setting.php:396
+msgid "Related posts"
+msgstr "関連記事"
+
+#: inc/setting.php:397
+msgid "Enable related posts"
+msgstr "関連記事を表示する"
+
+#: inc/setting.php:402
+msgid "Post like"
+msgstr "投稿にいいね"
+
+#: inc/setting.php:403
+msgid "Enable post like"
+msgstr "投稿にいいねを有効にする"
+
+#: inc/setting.php:408
+msgid "Post navigation"
+msgstr "投稿ナビゲーション"
+
+#: inc/setting.php:409
+msgid "Enable post navigation"
+msgstr "投稿ナビゲーションを有効にする"
+
+#: inc/setting.php:414
+msgid "Copy link"
+msgstr "リンクをコピー"
+
+#: inc/setting.php:415
+msgid "Enable copy link"
+msgstr "リンクをコピーを有効にする"
+
+#: inc/setting.php:426
+msgid "Show parent comment"
+msgstr "親コメントを表示する"
+
+#: inc/setting.php:427
+msgid "Enable show parent comment"
+msgstr "親コメントを表示するを有効にする"
+
+#: inc/setting.php:433
+msgid "Enable table of content"
+msgstr "目次を表示するを有効にする"
+
+#: inc/setting.php:438
+msgid "Start heading"
+msgstr "開始見出し"
+
+#: inc/setting.php:439
+msgid "Start heading,default h3"
+msgstr "開始見出し、デフォルトはh3"
+
+#: inc/setting.php:450
+msgid "Disable comment link"
+msgstr "コメントリンクを無効にする"
+
+#: inc/setting.php:451
+msgid "Disable comment author url"
+msgstr "コメント著者のURLを無効にする"
+
+#: inc/setting.php:456
+msgid "No reply text"
+msgstr "返信がない場合のテキスト"
+
+#: inc/setting.php:457
+msgid "Text display when no comment in current post."
+msgstr "現在の投稿にコメントがない場合に表示するテキスト。"
+
+#: inc/setting.php:462
+msgid "Friend icon"
+msgstr "友達アイコン"
+
+#: inc/setting.php:463
+msgid "Show icon when comment author url is in blogroll."
+msgstr "コメント著者のURLがブログロールにある場合にアイコンを表示する。"
+
+#: inc/setting.php:486
+msgid "SNS Icons"
+msgstr "SNSアイコン"
+
+#: inc/setting.php:487
+msgid ""
+"Show sns icons in footer, if this setting is on, the footer menu won',t be "
+"displayed."
+msgstr ""
+"フッターにSNSアイコンを表示します。この設定がオンの場合、フッターメニューは表"
+"示されません。"
+
+#: inc/setting.php:492
+msgid "Telegram"
+msgstr "Telegram"
+
+#: inc/setting.php:493
+msgid "Telegram link"
+msgstr "Telegramのリンク"
+
+#: inc/setting.php:498
+msgid "Email"
+msgstr "メール"
+
+#: inc/setting.php:499
+msgid "Your email address"
+msgstr "あなたのメールアドレス"
+
+#: inc/setting.php:504
+msgid "Instagram"
+msgstr "Instagram"
+
+#: inc/setting.php:505
+msgid "Instagram link"
+msgstr "Instagramのリンク"
+
+#: inc/setting.php:510
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/setting.php:511
+msgid "Twitter link"
+msgstr "Twitterのリンク"
+
+#: inc/setting.php:516
+msgid "RSS"
+msgstr "RSS"
+
+#: inc/setting.php:517
+msgid "RSS link"
+msgstr "RSSのリンク"
+
+#: inc/setting.php:522
+msgid "Github"
+msgstr "Github"
+
+#: inc/setting.php:523
+msgid "Github link"
+msgstr "Githubのリンク"
+
+#: inc/setting.php:528
+msgid "Discord"
+msgstr "Discord"
+
+#: inc/setting.php:529
+msgid "Discord link"
+msgstr "Discordのリンク"
+
+#: inc/setting.php:534
+msgid "Mastodon"
+msgstr "Mastodon"
+
+#: inc/setting.php:535
+msgid "Mastodon link"
+msgstr "Mastodonのリンク"
+
+#: inc/setting.php:540
+msgid "Custom"
+msgstr "カスタム"
+
+#: inc/setting.php:541
+msgid "Custom sns link,use html."
+msgstr "カスタムSNSリンク、HTMLを使用します。"
+
+#: inc/setting.php:551
+msgid "CSS"
+msgstr "CSS"
+
+#: inc/setting.php:552
+msgid "Custom CSS"
+msgstr "カスタムCSS"
+
+#: inc/setting.php:557
+msgid "Javascript"
+msgstr "Javascript"
+
+#: inc/setting.php:558
+msgid "Custom Javascript"
+msgstr "カスタムJavascript"
+
+#: inc/setting.php:563
+msgid "Copyright"
+msgstr "著作権"
+
+#: inc/setting.php:564
+msgid "Custom footer content"
+msgstr "カスタムフッターコンテンツ"
+
+#: search.php:6
+msgid "Search results for: %s"
+msgstr "検索結果: %s"
+
+#: template-part/post-navigation.php:14
+msgid "Post"
+msgstr "投稿"
+
+#: template-part/post-navigation.php:18
+msgid "Previous"
+msgstr "前の投稿"
+
+#: template-part/post-navigation.php:34
+msgid "Next"
+msgstr "次の投稿"
+
+#: template-part/single-related.php:12
+msgid "Related Posts"
+msgstr "関連記事"
+
+#. Template Name of the theme
+msgid "Archive"
+msgstr "アーカイブ"
+
+#. Template Name of the theme
+msgid "Links"
+msgstr "リンク"
+
+#. Template Name of the theme
+msgid "Map"
+msgstr "マップ"

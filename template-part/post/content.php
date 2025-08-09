@@ -1,5 +1,5 @@
 <?php global $coffinSetting; ?>
-<article class="cCard--item<?php if (get_post_meta('_fullImage')) echo ' sandraItem--full'; ?>" itemscope="itemscope" itemtype="http://schema.org/Article">
+<article class="cCard--item" itemscope="itemscope" itemtype="http://schema.org/Article">
     <div class="cCard--image">
         <a style="background-image: url(<?php echo coffin_get_background_image($post->ID, 800, 480); ?>);" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" aria-label="<?php the_title(); ?>">
         </a>
@@ -12,7 +12,7 @@
         </div>
         <div class="cCard--info">
             <time itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>">
-                <?php echo human_time_diff(get_the_time('U'), current_time('U')) . __('ago', 'Coffin'); ?>
+                <?php echo human_time_diff(get_the_time('U'), current_time('U')) . __(' ago', 'Coffin'); ?>
             </time>
             <?php if ($coffinSetting->get_setting('home_cat')) : ?>
                 <span class="middotDivider"></span>

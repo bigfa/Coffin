@@ -97,7 +97,7 @@ function get_the_link_items($id = null)
         }
         $output .= '</div>';
     } else {
-        $output = __('No links yet', 'Hera');
+        $output = '<div class="link-placeholder">' . __('No links yet', 'Coffin') . '</div>';
     }
     return $output;
 }

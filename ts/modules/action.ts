@@ -20,7 +20,7 @@ class coffinAction extends coffinBase {
         }
 
         const theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'auto';
-        const html = `<div class="fixed--theme">
+        const html = `<div class="cThemeSwitcher">
         <span class="${theme == 'dark' ? 'is-active' : ''}" data-action-value="dark">
             <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
                 stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"
@@ -57,10 +57,10 @@ class coffinAction extends coffinBase {
             document.querySelector('body')!.insertAdjacentHTML('beforeend', html);
         }
 
-        document.querySelectorAll('.fixed--theme span').forEach((item) => {
+        document.querySelectorAll('.cThemeSwitcher span').forEach((item) => {
             item.addEventListener('click', () => {
                 if (item.classList.contains('is-active')) return;
-                document.querySelectorAll('.fixed--theme span').forEach((item) => {
+                document.querySelectorAll('.cThemeSwitcher span').forEach((item) => {
                     item.classList.remove('is-active');
                 });
                 const actionValue = (item as HTMLElement).dataset.actionValue;
@@ -83,8 +83,8 @@ class coffinAction extends coffinBase {
             });
         });
 
-        if (document.querySelector('.post--share')) {
-            document.querySelector('.post--share')!.addEventListener('click', () => {
+        if (document.querySelector('.cArticle--share')) {
+            document.querySelector('.cArticle--share')!.addEventListener('click', () => {
                 navigator.clipboard.writeText(document.location.href).then(() => {
                     this.showNotice(this.obvInit.copy_success_text);
                 });

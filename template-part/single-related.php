@@ -5,7 +5,7 @@
  *
  * @package Bigfa
  * @subpackage Coffin
- * @since Hera 2.0.0
+ * @since Coffin 2.0.0
  */
 ?>
 <section class="cRelated--area">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="cRelated--meta">
                         <time datetime="<?php echo get_the_date('c'); ?>">
-                            <?php echo human_time_diff(get_the_time('U'), current_time('U')) . __('ago', 'Coffin'); ?>
+                            <?php echo human_time_diff(get_the_time('U'), current_time('U')) . __(' ago', 'Coffin'); ?>
                         </time>
                         <span class="middotDivider"></span>
                         <?php the_category(',') ?>

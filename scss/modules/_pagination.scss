@@ -1,0 +1,130 @@
+.nav-links {
+    display: flex;
+    justify-content: center;
+    background-color: var(--coffin-background-white);
+    padding: 20px;
+}
+
+.pagination {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media (max-width: 600px) {
+        text-align: center;
+    }
+
+    .page-numbers {
+        background-color: var(--coffin-background-gray);
+        color: var(--coffin-text-gray);
+        padding: 3px 12px;
+        border-radius: 3px;
+        margin-left: 8px;
+        margin-right: 8px;
+        font-size: 14px;
+
+        &.current,
+        &:hover {
+            background-color: var(--coffin-hover-color);
+            color: var(--coffin-background-white);
+        }
+
+        &.dots {
+            &:hover {
+                background-color: var(--coffin-background-gray);
+                color: var(--coffin-text-gray);
+            }
+        }
+
+        &.current,
+        &.dots {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+
+    .nav-previous,
+    .nav-next {
+        width: 49%;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        a {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cover {
+            border-radius: 8px;
+            height: 170px;
+            object-fit: cover;
+        }
+
+        text-align: right;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        border: 1px solid transparent;
+
+        .cover--link {
+            position: relative;
+        }
+    }
+
+    .cArticle + & {
+        margin-top: 10px;
+    }
+
+    .nav-previous {
+        text-align: left;
+    }
+
+    .meta-nav {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: var(--coffin-text-gray);
+    }
+
+    .post-title {
+        font-size: 14px;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: var(--coffin-hover-color);
+        }
+    }
+
+    @media (max-width: 720px) {
+        flex-direction: column;
+
+        .nav-previous,
+        .nav-next {
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+}
+
+.comments-pagination {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .page-numbers {
+        background: var(--coffin-main-color);
+        border: 1px solid var(--coffin-main-color);
+        border-radius: 3px;
+        color: #fff;
+        margin: 0 5px;
+        font-size: 12px;
+        line-height: 1;
+        padding: 5px 8px;
+
+        &:hover {
+            background: var(--coffin-hover-color);
+            border: 1px solid var(--coffin-hover-color);
+        }
+    }
+}

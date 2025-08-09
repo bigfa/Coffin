@@ -7,6 +7,7 @@
 @use 'modules/grap';
 @use 'modules/relatedPost';
 @use 'modules/comment';
+@use 'modules/pagination';
 
 @use 'templates/single';
 @use 'templates/archive';

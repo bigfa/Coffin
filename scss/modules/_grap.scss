@@ -15,6 +15,7 @@
         background-color: var(--coffin-background-gray-light);
         border-left: 4px solid var(--coffin-main-color);
         color: var(--coffin-text-gray);
+
         p {
             &:last-child {
                 margin-bottom: 0;
@@ -32,6 +33,7 @@
 
     a {
         text-decoration: underline;
+
         .svgIcon {
             margin-right: 4px;
         }
@@ -41,6 +43,7 @@
         margin-left: 30px;
         margin-bottom: 8px;
         padding-top: 2px;
+
         &:before {
             content: '•';
             box-sizing: border-box;
@@ -50,7 +53,6 @@
             display: inline-block;
             text-align: right;
             width: 58px;
-            // color: var(--coffin-main-color);
         }
     }
 
@@ -76,6 +78,7 @@
         display: block;
         border: 0;
         text-align: center;
+
         &:before {
             content: '...';
             display: inline-block;
@@ -90,6 +93,7 @@
 
     ol {
         counter-reset: a;
+
         & > li {
             &::before {
                 content: counter(a, decimal) '.';

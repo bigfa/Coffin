@@ -330,18 +330,6 @@ $coffinSetting = new coffinSetting(
                         'label' => __('Back to top', 'Coffin'),
                         'description' => __('Enable back to top', 'Coffin')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'loadmore',
-                    //     'label' => __('Load more', 'Coffin'),
-                    //     'description' => __('Enable load more', 'Coffin')
-                    // ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'home_author',
-                    //     'label' => __('Author info', 'Coffin'),
-                    //     'description' => __('Enable author info in homepage', 'Coffin')
-                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'home_cat',
@@ -360,36 +348,12 @@ $coffinSetting = new coffinSetting(
                         'label' => __('Reading time', 'Coffin'),
                         'description' => __('Show reading time of the post', 'Coffin')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'hide_home_cover',
-                    //     'label' => __('Hide home cover', 'Coffin'),
-                    //     'description' => __('Hide home cover', 'Coffin')
-                    // ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'exclude_status',
-                    //     'label' => __('Exclude status', 'Coffin'),
-                    //     'description' => __('Exclude post type status in homepage', 'Coffin')
-                    // ],
                 ]
             ],
 
             [
                 'id' => 'singluar',
                 'content' => [
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'bio',
-                    //     'label' => __('Author bio', 'Coffin'),
-                    //     'description' => __('Enable author bio', 'Coffin')
-                    // ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'author_sns',
-                    //     'label' => __('Author sns icons', 'Coffin'),
-                    //     'description' => __('Show author sns icons, will not show when author bio is off.', 'Coffin')
-                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'related',
@@ -414,12 +378,6 @@ $coffinSetting = new coffinSetting(
                         'label' => __('Copy link', 'Coffin'),
                         'description' => __('Enable copy link', 'Coffin')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'category_card',
-                    //     'label' => __('Category card', 'Coffin'),
-                    //     'description' => __('Show post category info after post.', 'Coffin')
-                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'show_parent',
@@ -438,12 +396,6 @@ $coffinSetting = new coffinSetting(
                         'label' => __('Start heading', 'Coffin'),
                         'description' => __('Start heading,default h3', 'Coffin')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'show_rss_btn',
-                    //     'label' => __('RSS Button', 'Coffin'),
-                    //     'description' => __('Show RSS Button in meta', 'Coffin')
-                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'disable_comment_link',
